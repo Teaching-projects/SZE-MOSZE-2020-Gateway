@@ -6,9 +6,9 @@
 
 class Monster {
 
-  std::string name;
+  const std::string name;
   int hp;
-  int dmg;
+  const int dmg;
 
 public:
 
