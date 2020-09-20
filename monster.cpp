@@ -18,16 +18,13 @@ void Monster::hpDown(int dmg) {
 
 void Monster::monsterAttack(Monster &monster) {
   if (hp > 0) {
-    std::cout << name << " (" << hp << ")" << " hits " << monster.getName() << " and deals " << dmg << " damage!" << std::endl;
     monster.hpDown(dmg);
   }
 }
 
-void Monster::whoWon(Monster &monster) {
-  if (hp < 0) {
-    std::cout << monster.getName() << " defeated " << name << std::endl;
+bool Monster::isDefeated() const {
+  if (hp <= 0) {
+    return true;
   }
-  else {
-    std::cout << name << " defeated " << monster.getName() << std::endl;
-  }
+  else return false;
 }
