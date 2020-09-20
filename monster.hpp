@@ -1,7 +1,5 @@
 #ifndef MONSTER_H
 #define MONSTER_H
-
-#include <iostream>
 #include <string>
 
 class Monster {
@@ -24,7 +22,7 @@ public:
 
   void monsterAttack(Monster &monster);
 
-  void whoWon(Monster &monster);
+  bool isDefeated() const;
 
 };
 
