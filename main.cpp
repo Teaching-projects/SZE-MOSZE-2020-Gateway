@@ -34,15 +34,24 @@ int main (int argc, char** argv) {
   }
 
   std::cout << monster1.getName() << " HP: " << monster1.getHp() << " DMG: " << monster1.getDmg() << std::endl;
-  std::cout << monster2.getName() << " HP: " << monster2.getHp() << " DMG: " << monster2.getDmg() << std::endl;
+  std::cout << monster2.getName() << " HP: " << monster2.getHp() << " DMG: " << monster2.getDmg() << std::endl << std::endl;
 
   while ( (monster1.getHp() > 0) && (monster2.getHp() > 0) ) {
-    monster1.monsterAttack(monster2);
+    if (monster1.getHp() > 0) {
+      std::cout << monster1.getName() << " [" << monster1.getHp() << "]" << " attacks " << monster2.getName() << " and deals: " << monster1.getDmg() << " damage!\n";
+      monster1.monsterAttack(monster2);
+    }
     std::cout << std::endl;
-    monster2.monsterAttack(monster1);
+    if (monster2.getHp() > 0) {
+      std::cout << monster2.getName() << " [" << monster2.getHp() << "]" << " attacks " << monster1.getName() << " and deals: " << monster2.getDmg() << " damage!\n";
+      monster2.monsterAttack(monster1);
+    }
   }
-
-  monster1.whoWon(monster2);
+  std::cout << std::endl;
+  if (monster1.isDefeated() == true) {
+    std::cout << monster2.getName() << " defeated " << monster1.getName() << std::endl;
+  }
+  else {std::cout << monster1.getName() << " defeated " << monster2.getName() << std::endl;}
 
   return 0;
 }
