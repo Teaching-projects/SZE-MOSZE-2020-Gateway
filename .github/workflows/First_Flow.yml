@@ -1,0 +1,13 @@
+name: First_Flow
+
+on:
+  push
+
+jobs:
+  Build_And_Test:
+    runs-on: ubuntu latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: g++ -Wall main.cpp
+      - run: ./test.sh
+      - run: diff results.txt expected_output.txt
