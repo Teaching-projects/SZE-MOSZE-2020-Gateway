@@ -2,7 +2,7 @@
 
 The program shows two monsters who are hitting each other, and at the end of the fight one of them dies.
 
-You have to run ./a.out with json files, for example: ./a.out units/ input1.json input2.json
+You have to run ./a.out with json files, for example: ./a.out units/monster1.json units/monster2.json
 
 There are two main functions used in the main.cpp:
   * monsterAttack: This fuction is called to decrease the health of the monster who is given in the functions argument.
