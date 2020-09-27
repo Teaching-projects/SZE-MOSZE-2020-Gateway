@@ -57,7 +57,7 @@ Monster Monster::readJson(const std::string &filename) {
   }
 
   else {
-    std::cerr << "Hiba a fajl megnyitasakor!";
+    throw std::invalid_argument("Invalid file name");
   }
 
 }

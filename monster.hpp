@@ -7,13 +7,12 @@ class Monster {
 
 private:
 
-  std::string name;
+  const std::string name;
   int hp;
-  int dmg;
+  const int dmg;
 
 public:
 
-  Monster() {}
   Monster(const std::string &n, const int &h, const int &d) : name(n), hp(h), dmg(d) {}
 
   // getterek

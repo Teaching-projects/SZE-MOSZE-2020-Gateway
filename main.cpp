@@ -4,11 +4,23 @@
 
 int main (int argc, char** argv) {
 
+  if (argc != 3) {
+    std::cout << "Invalid arguments! You must give 3 arguments!" << std::endl;
+    return -1;
+  }
+
+  try {
+    Monster monster1 = Monster::readJson(argv[1]);
+    Monster monster2 = Monster::readJson(argv[2]);
+  }
+
+  catch (const std::invalid_argument &exception) {
+    std::cout << exception.what() << std::endl;
+    return -1;
+  }
+
   Monster monster1 = Monster::readJson(argv[1]);
   Monster monster2 = Monster::readJson(argv[2]);
-
-  // std::cout << monster1.getName() << " HP: " << monster1.getHp() << " DMG: " << monster1.getDmg() << std::endl;
-  // std::cout << monster2.getName() << " HP: " << monster2.getHp() << " DMG: " << monster2.getDmg() << std::endl << std::endl;
 
   while ( (monster1.getHp() > 0) && (monster2.getHp() > 0) ) {
 
