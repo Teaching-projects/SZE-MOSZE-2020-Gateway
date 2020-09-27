@@ -2,7 +2,6 @@
 #define MONSTER_H
 
 #include <string>
-#include <fstream>
 
 class Monster {
 
