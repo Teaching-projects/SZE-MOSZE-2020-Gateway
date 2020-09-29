@@ -21,8 +21,8 @@ public:
   int getDmg() const;
 
   // mainbe használt függvények
-  void hpDown(int dmg);
-  void monsterAttack(Monster &monster);
+  // void hpDown(int dmg);
+  void monsterAttack(Monster &target) const;
   bool isDefeated() const;
   static Monster readJson(const std::string &filename);
 
