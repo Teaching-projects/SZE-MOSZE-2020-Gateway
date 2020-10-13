@@ -1,6 +1,0 @@
-Igor wins. Remaining HP: 100
-Igor wins. Remaining HP: 110
-Igor wins. Remaining HP: 50
-Rogi wins. Remaining HP: 40
-Igor wins. Remaining HP: 80
-Rogi wins. Remaining HP: 10
