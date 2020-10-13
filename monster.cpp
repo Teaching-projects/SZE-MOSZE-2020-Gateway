@@ -8,10 +8,24 @@ int Monster::getHp() const { return hp; }
 
 int Monster::getDmg() const { return dmg; }
 
-// void Monster::hpDown(int dmg) { hp -= dmg; }
+double Monster::getCd() const { return cd; }
 
 void Monster::monsterAttack(Monster &target) const {
-  if (hp > 0) target.hp -= getDmg();
+  if (hp > 0) {
+    target.hp -= getDmg();
+  }
+}
+
+bool Monster::monsterCd(Monster &target){
+  if (cd_c > 0.1) {
+    cd_c -= 0.1;
+    return true;
+  }
+  else {
+    monsterAttack(target);
+    cd_c = getCd();
+    return false;
+  }
 }
 
 bool Monster::isDefeated() const {
@@ -27,6 +41,7 @@ Monster Monster::readJson(const std::string &filename) {
     std::string name;
     int hp;
     int dmg;
+    double cd;
     std::string line;
 
     std::getline(file,line);
@@ -49,15 +64,17 @@ Monster Monster::readJson(const std::string &filename) {
     posComma = line.find(',');
     dmg = stoi(line.substr(posColon+2));
 
+    std::getline(file,line);
+    posColon = line.find(':');
+    cd = std::stod(line.substr(posColon+2));
+
     file.close();
 
-    Monster monster(name,hp,dmg);
+    Monster monster(name,hp,dmg,cd);
     return monster;
-
   }
 
   else {
     throw std::invalid_argument("Invalid file name");
   }
-
 }
