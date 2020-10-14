@@ -13,10 +13,19 @@ jobs:
       - run: g++ *.cpp -o a.out -Wall -Wextra -g
       - run: cppcheck *.cpp --enable=warning 
       - run: valgrind --track-origins=yes --leak-check=full --log-file=leaklogfile.txt --error-exitcode=-1 ./a.out units/monster1.json units/monster2.json
+      - run: valgrind --tool=callgrind ./a.out units/monster1.json units/monster2.json
+
       - name: Uploading valgrind results
         uses: actions/upload-artifact@v2
         with:
           name: leaklogfile
           path: ./leaklogfile.txt
+
+      - name: Uploading callgrind results
+        uses: actions/upload-artifact@v2
+        with:
+           name: callgrind_results
+           path: ./callgrind.out
+
       - run: ./test.sh
       - run: diff results.txt expected_output.txt
