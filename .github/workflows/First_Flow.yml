@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: sudo apt-get install cppcheck
       - run: g++ *.cpp -o a.out -Wall -Wextra -g
       - run: cppcheck *.cpp --enable=warning 
       - run: valgrind --track-origins=yes ./a.out units/monster1.json units/monster2.json
