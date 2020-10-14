@@ -12,13 +12,13 @@ double Monster::getCd() const { return cd; }
 
 double Monster::getCd_c() const { return cd_c; }
 
-void Monster::monsterAttack(Monster &target /** [in] Monster type param*/) const {
+void Monster::monsterAttack(Monster &target) const {
   if (hp > 0) {
     target.hp -= getDmg();
   }
 }
 
-bool Monster::monsterCd(Monster &target /** [in] Monster type param*/){
+void Monster::monsterCd(Monster &target){
   if (cd_c >= 0.1) {
     cd_c -= 0.1;
   }
@@ -36,23 +36,16 @@ bool Monster::isDefeated() const {
   else return false;
 }
 
-/**
-  * \brief This functions read the datas of the monsters from a json file
-
-  * \return A Monster type with the right datas
-
-  The functions search for particular parts to find the rifght data to put into the variables
-  */
-Monster Monster::readJson(const std::string &filename /** [in] This file names param*/) {
+Monster Monster::readJson(const std::string &filename) {
   std::ifstream file(filename);
 
   if (file.is_open()) {
 
-    std::string name; //!< Variable for monsters name
-    int hp; //!< Variable for monsters health points
-    int dmg; //!< Variable for monsters damage
-    double cd; //!< Variable for monsters cooldown
-    std::string line; //!< Variable for the read lines
+    std::string name;
+    int hp;
+    int dmg;
+    double cd;
+    std::string line;
 
     std::getline(file,line);
 
