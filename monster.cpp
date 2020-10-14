@@ -56,32 +56,43 @@ Monster Monster::readJson(const std::string &filename /** [in] This file names p
 
     std::getline(file,line);
 
-    int posColon; ///< The variable for the position of the colon
-    int posComma; ///< The variable for the position of the comma
+    ///< The variable for the position of the colon
+    int posColon;
+    ///< The variable for the position of the comma
+    int posComma;
 
-    std::getline(file,line); /// This reads a line from a file
-    posColon = line.find(':'); /// This finds the position of the colon
-    posComma = line.find(','); /// This finds the position of the coma
-    name = line.substr(posColon+3,(posComma-1)-(posColon+3)); /// This puts a substring to the name variable
+    /// This reads a line from a file
+    std::getline(file,line);
+    /// This finds the position of the colon
+    posColon = line.find(':');
+    /// This finds the position of the coma
+    posComma = line.find(',');
+    /// This puts a substring to the name variable
+    name = line.substr(posColon+3,(posComma-1)-(posColon+3));
 
     std::getline(file,line);
     posColon = line.find(':');
     posComma = line.find(',');
-    hp = stoi(line.substr(posColon+2,(posComma-1)-(posColon+1))); /// This puts a substring to the hp variable
+    /// This puts a substring to the hp variable
+    hp = stoi(line.substr(posColon+2,(posComma-1)-(posColon+1)));
 
     std::getline(file,line);
     posColon = line.find(':');
     posComma = line.find(',');
-    dmg = stoi(line.substr(posColon+2)); /// This put a substring to the dmg variable
+    /// This put a substring to the dmg variable
+    dmg = stoi(line.substr(posColon+2));
 
     std::getline(file,line);
     posColon = line.find(':');
-    cd = std::stod(line.substr(posColon+2)); /// This puts a substring to the cd variable
+    /// This puts a substring to the cd variable
+    cd = std::stod(line.substr(posColon+2));
 
-    file.close(); /// This closes the file
+    /// This closes the file
+    file.close();
 
     Monster monster(name,hp,dmg,cd);
-    return monster; /// This return a Monster type
+    /// This return a Monster type
+    return monster;
   }
 
   else {
