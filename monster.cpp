@@ -17,6 +17,9 @@ void Monster::monsterAttack(Monster &target /** [in] Monster type param*/) const
 }
 
 bool Monster::monsterCd(Monster &target /** [in] Monster type param*/){
+  if (cd_c == 0) {
+    monsterAttack(target);
+  }
   if (cd_c >= 0.1) {
     cd_c -= 0.1;
   }
@@ -75,7 +78,7 @@ Monster Monster::readJson(const std::string &filename /** [in] This file names p
 
     file.close(); /// This closes the file
 
-    Monster monster(name,hp,dmg,cd); 
+    Monster monster(name,hp,dmg,cd);
     return monster; /// This return a Monster type
   }
 

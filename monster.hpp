@@ -25,13 +25,13 @@ private:
   int hp; ///< The health points of the monster
   const int dmg; ///< The attack damage of the monster
   const double cd; ///< The cooldown of the monster
-  double cd_c; ///< The cooldown counter of the monster
+  double cd_c = 0; ///< The cooldown counter of the monster
 
   void monsterAttack(Monster &target) const; /// This funcitons decerease a monsters health by the other monsters damage
 
 public:
 
-  Monster(const std::string &n, int &h, const int &d, const double c) : name(n), hp(h), dmg(d), cd(c), cd_c(c) {} /// This is the constructor
+  Monster(const std::string &n, int &h, const int &d, const double c) : name(n), hp(h), dmg(d), cd(c){} /// This is the constructor
   std::string getName() const; /// This is a simple getter for a monsters name
   int getHp() const; /// This is a simple getter for a monsters name health points
   int getDmg() const; /// This is a simple getter for a monsters name damage
