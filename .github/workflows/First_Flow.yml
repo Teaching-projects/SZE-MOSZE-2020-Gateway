@@ -27,11 +27,5 @@ jobs:
            name: callgrind_results
            path: ./callgrindresults.txt
 
-      - name: Uploading callgrind detailed results
-        uses: actions/upload-artifact@v2
-        with:
-           name: callgrind_detailed_restults
-           path: ./callgrind.out.pid
-
       - run: ./test.sh
       - run: diff results.txt expected_output.txt
