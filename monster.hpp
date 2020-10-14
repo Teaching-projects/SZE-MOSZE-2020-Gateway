@@ -21,11 +21,11 @@ class Monster {
 
 private:
 
-  const std::string name; ///< The name of the monster
-  int hp; ///< The health points of the monster
-  const int dmg; ///< The attack damage of the monster
-  const double cd; ///< The cooldown of the monster
-  double cd_c = 0; ///< The cooldown counter of the monster
+  const std::string name; //!< The name of the monster
+  int hp; //!< The health points of the monster
+  const int dmg; //!< The attack damage of the monster
+  const double cd; //!< The cooldown of the monster
+  double cd_c = 0; //!< The cooldown counter of the monster
 
   /// This funcitons decerease a monsters health by the other monsters damage
   void monsterAttack(Monster &target) const;
