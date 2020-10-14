@@ -3,4 +3,4 @@ Igor wins. Remaining HP: 240
 Rogi wins. Remaining HP: 520
 Rogi wins. Remaining HP: 740
 Igor wins. Remaining HP: 240
-Rogi wins. Remaining HP: 710
+Rogi wins. Remaining HP: 740
