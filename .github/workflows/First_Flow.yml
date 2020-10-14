@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
            name: callgrind_results
-           path: ./callgrind.out
+           run: valgrind --tool=callgrind ./a.out units/monster1.json units/monster2.json
 
       - run: ./test.sh
       - run: diff results.txt expected_output.txt
