@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: g++ -Wall *.cpp -o a.out
+      - run: g++ *.cpp -o a.out -Wall -Wextra -g
+      - run: cppcheck *.cpp --enable=warning 
+      - run: valgrind --track-origins=yes ./a.out units/monster1.json units/monster2.json
       - run: ./test.sh
       - run: diff results.txt expected_output.txt
