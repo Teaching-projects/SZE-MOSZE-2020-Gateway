@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
            name: callgrind_detailed_restults
-           path: ./callgrind.out.<pid>
+           path: ./callgrind.out.pid
 
       - run: ./test.sh
       - run: diff results.txt expected_output.txt
