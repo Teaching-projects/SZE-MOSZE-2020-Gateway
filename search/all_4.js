@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sze_2dmosze_2d2020_2dgateway',['SZE-MOSZE-2020-Gateway',['../md_README.html',1,'']]]
+  ['isdefeated',['isDefeated',['../classMonster.html#a37a9deacc5d13b5f2591cd4143e4ae81',1,'Monster']]]
 ];

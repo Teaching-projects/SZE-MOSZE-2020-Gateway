@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Monster cooldown counter: Monster Class Reference</title>
+<title>Monster fighting program, with cooldowns: Monster Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Monster cooldown counter
+   <div id="projectname">Monster fighting program, with cooldowns
    </div>
-   <div id="projectbrief">This is a program to decrease each monsters cooldown, until he can hit!</div>
+   <div id="projectbrief">This program is made for 2 units, and when their cooldown is expires, they can make a hit!</div>
   </td>
  </tr>
  </tbody>
@@ -62,6 +62,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classMonster-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Monster Class Reference</div>  </div>
@@ -99,35 +101,127 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a2b8c9218fd3216af90883c9c8dfc573a">getCd_c</a> () const</td></tr>
 <tr class="memdesc:a2b8c9218fd3216af90883c9c8dfc573a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a simple getter for a monster cooldown counter. <br /></td></tr>
 <tr class="separator:a2b8c9218fd3216af90883c9c8dfc573a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9ffedd4e504cbb3155ab840c393dc3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#ae9ffedd4e504cbb3155ab840c393dc3d">monsterCd</a> (<a class="el" href="classMonster.html">Monster</a> &amp;target)</td></tr>
-<tr class="memdesc:ae9ffedd4e504cbb3155ab840c393dc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a funciton to decrease the cooldown of a monster.  <a href="#ae9ffedd4e504cbb3155ab840c393dc3d">More...</a><br /></td></tr>
-<tr class="separator:ae9ffedd4e504cbb3155ab840c393dc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37a9deacc5d13b5f2591cd4143e4ae81"><td class="memItemLeft" align="right" valign="top"><a id="a37a9deacc5d13b5f2591cd4143e4ae81"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a37a9deacc5d13b5f2591cd4143e4ae81">isDefeated</a> () const</td></tr>
-<tr class="memdesc:a37a9deacc5d13b5f2591cd4143e4ae81"><td class="mdescLeft">&#160;</td><td class="mdescRight">This funciton decides if a monster is defeated (health is lower or equal zero. <br /></td></tr>
+<tr class="memitem:ac54d67463cabd019ae7194b9adbc2064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#ac54d67463cabd019ae7194b9adbc2064">monsterCd</a> (<a class="el" href="classMonster.html">Monster</a> &amp;target)</td></tr>
+<tr class="memdesc:ac54d67463cabd019ae7194b9adbc2064"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the main part of the cooldown counter program.  <a href="#ac54d67463cabd019ae7194b9adbc2064">More...</a><br /></td></tr>
+<tr class="separator:ac54d67463cabd019ae7194b9adbc2064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a9deacc5d13b5f2591cd4143e4ae81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a37a9deacc5d13b5f2591cd4143e4ae81">isDefeated</a> () const</td></tr>
+<tr class="memdesc:a37a9deacc5d13b5f2591cd4143e4ae81"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called to decide which monsters is dead.  <a href="#a37a9deacc5d13b5f2591cd4143e4ae81">More...</a><br /></td></tr>
 <tr class="separator:a37a9deacc5d13b5f2591cd4143e4ae81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a225f0c60693e4f20e05d95514e67e398"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classMonster.html">Monster</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a225f0c60693e4f20e05d95514e67e398">readJson</a> (const std::string &amp;filename)</td></tr>
-<tr class="memdesc:a225f0c60693e4f20e05d95514e67e398"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a function to read the monsters attributes.  <a href="#a225f0c60693e4f20e05d95514e67e398">More...</a><br /></td></tr>
+<tr class="memdesc:a225f0c60693e4f20e05d95514e67e398"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is for reading the data members from a json file.  <a href="#a225f0c60693e4f20e05d95514e67e398">More...</a><br /></td></tr>
 <tr class="separator:a225f0c60693e4f20e05d95514e67e398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a25f6f554a17d7eefcee3b6538b5901a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a25f6f554a17d7eefcee3b6538b5901a6">monsterAttack</a> (<a class="el" href="classMonster.html">Monster</a> &amp;target) const</td></tr>
+<tr class="memdesc:a25f6f554a17d7eefcee3b6538b5901a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a function to decrease a monsters health points.  <a href="#a25f6f554a17d7eefcee3b6538b5901a6">More...</a><br /></td></tr>
+<tr class="separator:a25f6f554a17d7eefcee3b6538b5901a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a4ce38cc9d6af5a37f54f90d2d7ab8ee0"><td class="memItemLeft" align="right" valign="top"><a id="a4ce38cc9d6af5a37f54f90d2d7ab8ee0"></a>
+const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a4ce38cc9d6af5a37f54f90d2d7ab8ee0">name</a></td></tr>
+<tr class="memdesc:a4ce38cc9d6af5a37f54f90d2d7ab8ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">name of the monster <br /></td></tr>
+<tr class="separator:a4ce38cc9d6af5a37f54f90d2d7ab8ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5512ea0cd543721acb551d3d963486"><td class="memItemLeft" align="right" valign="top"><a id="a8f5512ea0cd543721acb551d3d963486"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a8f5512ea0cd543721acb551d3d963486">hp</a></td></tr>
+<tr class="memdesc:a8f5512ea0cd543721acb551d3d963486"><td class="mdescLeft">&#160;</td><td class="mdescRight">health of the monster <br /></td></tr>
+<tr class="separator:a8f5512ea0cd543721acb551d3d963486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff4239d9f5c09bfadbdf5fcfc4b2f95"><td class="memItemLeft" align="right" valign="top"><a id="a8ff4239d9f5c09bfadbdf5fcfc4b2f95"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a8ff4239d9f5c09bfadbdf5fcfc4b2f95">dmg</a></td></tr>
+<tr class="memdesc:a8ff4239d9f5c09bfadbdf5fcfc4b2f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">damage of the monster <br /></td></tr>
+<tr class="separator:a8ff4239d9f5c09bfadbdf5fcfc4b2f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e12c5b93f4feff40e66c5efa21e05b5"><td class="memItemLeft" align="right" valign="top"><a id="a8e12c5b93f4feff40e66c5efa21e05b5"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a8e12c5b93f4feff40e66c5efa21e05b5">cd</a></td></tr>
+<tr class="memdesc:a8e12c5b93f4feff40e66c5efa21e05b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">cooldown of the monster <br /></td></tr>
+<tr class="separator:a8e12c5b93f4feff40e66c5efa21e05b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f592d7192b485b44b197bbbd200c29"><td class="memItemLeft" align="right" valign="top"><a id="a47f592d7192b485b44b197bbbd200c29"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a47f592d7192b485b44b197bbbd200c29">cd_c</a> = 0</td></tr>
+<tr class="memdesc:a47f592d7192b485b44b197bbbd200c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">cooldown counter for the monster <br /></td></tr>
+<tr class="separator:a47f592d7192b485b44b197bbbd200c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classMonster.html" title="Monster class. ">Monster</a> class. </p>
-<p>This class contains a monsters attributes</p>
+<p>This class contains a monsters attributes, which can change it the future. For now, the monster class has 5 members. These are: name, hp, dmg, cd, cd_c</p>
+<dl class="section author"><dt>Author</dt><dd>hmartin28</dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2020/10/13 18:04</dd></dl>
-<p>Created on: 2020/10/13 18:04 </p>
+<dl class="section date"><dt>Date</dt><dd>2020/10/14 17:22</dd></dl>
+<p>Created on: 2020/10/14 17:22 </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae9ffedd4e504cbb3155ab840c393dc3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9ffedd4e504cbb3155ab840c393dc3d">&#9670;&nbsp;</a></span>monsterCd()</h2>
+<a id="a37a9deacc5d13b5f2591cd4143e4ae81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a9deacc5d13b5f2591cd4143e4ae81">&#9670;&nbsp;</a></span>isDefeated()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Monster::monsterCd </td>
+          <td class="memname">bool Monster::isDefeated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is called to decide which monsters is dead. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the monsters is dead </dd>
+<dd>
+false if its not dead </dd></dl>
+
+</div>
+</div>
+<a id="a25f6f554a17d7eefcee3b6538b5901a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f6f554a17d7eefcee3b6538b5901a6">&#9670;&nbsp;</a></span>monsterAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Monster::monsterAttack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMonster.html">Monster</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is a function to decrease a monsters health points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>It is a monster type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This funciton is called to decrease a monsters health with the opponents damage number We call this funciton in the main.cpp like this: monster1.monsterAttack(monster2); </p>
+
+</div>
+</div>
+<a id="ac54d67463cabd019ae7194b9adbc2064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54d67463cabd019ae7194b9adbc2064">&#9670;&nbsp;</a></span>monsterCd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Monster::monsterCd </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classMonster.html">Monster</a> &amp;&#160;</td>
           <td class="paramname"><em>target</em></td><td>)</td>
@@ -136,13 +230,14 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This is a funciton to decrease the cooldown of a monster. </p>
+<p>This is the main part of the cooldown counter program. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td><a class="el" href="classMonster.html" title="Monster class. ">Monster</a> type param </td></tr>
+    <tr><td class="paramname">target</td><td>It is a monster type.</td></tr>
   </table>
   </dd>
 </dl>
+<p>In this function we watch the cooldown counter, and we decrease its number until it reaches 0. If the number reaches 0, we hit the other monster, and we reset its cooldown and start again until one of the monster is not dead. </p>
 
 </div>
 </div>
@@ -170,21 +265,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This is a function to read the monsters attributes. </p>
-<p>This functions read the datas of the monsters from a json file.</p>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classMonster.html" title="Monster class. ">Monster</a> type with the right datas</dd></dl>
-<p>The functions search for particular parts to find the rifght data to put into the variables </p>
-<p>&lt; Variable for monsters name</p>
-<p>&lt; Variable for monsters health points</p>
-<p>&lt; Variable for monsters damage</p>
-<p>&lt; Variable for monsters cooldown</p>
-<p>&lt; Variable for the read lines </p>
+<p>This function is for reading the data members from a json file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>This file names param </td></tr>
+    <tr><td class="paramname">filename</td><td>It must be an existing json file.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>monster, with the right attributes (name,hp,dmg,cd) </dd></dl>
 
 </div>
 </div>
