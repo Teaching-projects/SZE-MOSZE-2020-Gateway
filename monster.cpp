@@ -1,21 +1,36 @@
 #include "monster.hpp"
 #include <fstream>
 #include <iostream>
+#include <math.h>
 
 std::string Monster::getName() const { return name; }
 
-int Monster::getHp() const { return hp; }
+float Monster::getHp() { return hp; }
 
-int Monster::getDmg() const { return dmg; }
+float Monster::getDmg() { return dmg; }
 
-// void Monster::hpDown(int dmg) { hp -= dmg; }
+float Monster::getaktHp() { return akthp; }
 
-void Monster::monsterAttack(Monster &target) const {
-  if (hp > 0) target.hp -= getDmg();
+float Monster::getXp() { return xp; }
+
+float Monster::getLvl() { return lvl; }
+
+void Monster::monsterAttack(Monster &target) {
+  if (akthp > 0) {
+    target.akthp -= getDmg();
+    xp += dmg;
+    if (xp >= lvl*100) {
+      lvl += 1;
+      xp -= lvl*100;
+      hp = floor(hp * 1.1);
+      akthp = hp;
+      dmg = floor(dmg * 1.1);
+    }
+  }
 }
 
 bool Monster::isDefeated() const {
-  if (hp <= 0) return true;
+  if (akthp <= 0) return true;
   else return false;
 }
 

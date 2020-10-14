@@ -8,21 +8,24 @@ class Monster {
 private:
 
   const std::string name;
-  int hp;
-  const int dmg;
+  float hp;
+  float dmg;
+  float akthp;
+  float xp = 0;
+  float lvl = 1;
 
 public:
 
-  Monster(const std::string &n, const int &h, const int &d) : name(n), hp(h), dmg(d) {}
+  Monster(const std::string &n, const int &h, const int &d) : name(n), hp(h), dmg(d), akthp(h) {}
 
-  // getterek
   std::string getName() const;
-  int getHp() const;
-  int getDmg() const;
+  float getHp();
+  float getDmg();
+  float getaktHp();
+  float getXp();
+  float getLvl();
 
-  // mainbe használt függvények
-  // void hpDown(int dmg);
-  void monsterAttack(Monster &target) const;
+  void monsterAttack(Monster &target);
   bool isDefeated() const;
   static Monster readJson(const std::string &filename);
 
