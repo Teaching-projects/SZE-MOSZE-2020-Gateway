@@ -10,6 +10,8 @@ int Monster::getDmg() const { return dmg; }
 
 double Monster::getCd() const { return cd; }
 
+double Monster::getCd_c() const { return cd_c; }
+
 void Monster::monsterAttack(Monster &target /** [in] Monster type param*/) const {
   if (hp > 0) {
     target.hp -= getDmg();
@@ -17,13 +19,13 @@ void Monster::monsterAttack(Monster &target /** [in] Monster type param*/) const
 }
 
 bool Monster::monsterCd(Monster &target /** [in] Monster type param*/){
-  if (cd_c == 0) {
-    monsterAttack(target);
-  }
   if (cd_c >= 0.1) {
     cd_c -= 0.1;
   }
   else {
+    if (target.cd_c == cd_c) {
+      monsterAttack(target);
+    }
     monsterAttack(target);
     cd_c = getCd();
   }

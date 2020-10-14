@@ -36,6 +36,7 @@ public:
   int getHp() const; /// This is a simple getter for a monsters name health points
   int getDmg() const; /// This is a simple getter for a monsters name damage
   double getCd() const; /// This is a simple getter for a monsters cooldown
+  double getCd_c() const; /// This is a simple getter for a monster cooldown counter
 
   bool monsterCd(Monster &target); /// This is a funciton to decrease the cooldown of a monster
   bool isDefeated() const; /// This funciton decides if a monster is defeated (health is lower or equal zero)
