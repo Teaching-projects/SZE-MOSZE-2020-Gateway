@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "monster.hpp"
+#include "parser.hpp"
 
 int main (int argc, char** argv) {
 
@@ -31,7 +32,6 @@ int main (int argc, char** argv) {
     if (monster2.getHp() > 0) {
       monster2.monsterAttack(monster1);
     }
-
   }
 
   if (monster1.isDefeated() == true) { std::cout << monster2.getName() << " wins. Remaining HP: " << monster2.getHp() << std::endl; }
