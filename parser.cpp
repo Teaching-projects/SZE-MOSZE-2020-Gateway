@@ -1,6 +1,6 @@
 #include "parser.hpp"
 
-void Parser::fileparser(const std::string &filename) {
+void Parser::fileparser(std::string &filename) {
   std::ifstream file(filename);
   std::string key, data, line="";
   char c;

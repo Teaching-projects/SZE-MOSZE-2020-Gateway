@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/jsonparsertest.cpp
+parser.hpp
+/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/parser.hpp
+gtest/gtest.h
+-
+
+/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/parser.hpp
+iostream
+-
+fstream
+-
+string
+-
+map
+-
+
