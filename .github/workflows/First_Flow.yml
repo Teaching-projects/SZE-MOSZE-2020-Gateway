@@ -11,9 +11,9 @@ jobs:
       - run: sudo apt-get install cppcheck
       - run: sudo apt-get install valgrind
       - run: g++ *.cpp -o a.out -Wall -Wextra -Werror -g
-      - run: cppcheck *.cpp --enable=warning
+      - run: cppcheck --error-exitcode=1 *.cpp --enable=warning
+      - run: cppcheck --output-file=cppcheckfile.txt *.cpp --enable=style,performance
       - run: valgrind --track-origins=yes --leak-check=full --log-file=leaklogfile.txt --error-exitcode=1 ./a.out units/monster1.json units/monster2.json
-      - run: valgrind --tool=callgrind --log-file=callgrindresults.txt ./a.out units/monster1.json units/monster2.json
 
       - name: Uploading valgrind results
         uses: actions/upload-artifact@v2
@@ -21,11 +21,11 @@ jobs:
           name: leaklogfile
           path: ./leaklogfile.txt
 
-      - name: Uploading callgrind results
+      - name: Uploading cppcheck results
         uses: actions/upload-artifact@v2
         with:
-           name: callgrind_results
-           path: ./callgrindresults.txt
+          name: cppcheck_results
+          path: ./cppcheckfile.txt
 
       - run: ./test.sh
       - run: diff results.txt expected_output.txt
