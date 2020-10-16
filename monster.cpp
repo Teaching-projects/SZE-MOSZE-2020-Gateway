@@ -5,15 +5,15 @@
 
 std::string Monster::getName() const { return name; }
 
-float Monster::getHp() { return hp; }
+float Monster::getHp() const { return hp; }
 
-float Monster::getDmg() { return dmg; }
+float Monster::getDmg() const { return dmg; }
 
-float Monster::getaktHp() { return akthp; }
+float Monster::getaktHp() const { return akthp; }
 
-float Monster::getXp() { return xp; }
+float Monster::getXp() const { return xp; }
 
-float Monster::getLvl() { return lvl; }
+float Monster::getLvl() const { return lvl; }
 
 void Monster::monsterAttack(Monster &target) {
   if (akthp > 0) {

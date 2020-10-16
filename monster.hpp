@@ -19,11 +19,11 @@ public:
   Monster(const std::string &n, const int &h, const int &d) : name(n), hp(h), dmg(d), akthp(h) {}
 
   std::string getName() const;
-  float getHp();
-  float getDmg();
-  float getaktHp();
-  float getXp();
-  float getLvl();
+  float getHp() const;
+  float getDmg() const;
+  float getaktHp() const;
+  float getXp() const;
+  float getLvl() const;
 
   void monsterAttack(Monster &target);
   bool isDefeated() const;
