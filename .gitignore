@@ -79,7 +79,3 @@ Temporary Items
 .out*
 results.txt
 /DOCS
-/test/CMakefiles
-CMakeCache.txt
-cmake_install.cmake
-Makefile

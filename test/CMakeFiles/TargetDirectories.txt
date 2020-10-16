@@ -1,3 +1,0 @@
-/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/CMakeFiles/rebuild_cache.dir
-/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/CMakeFiles/runTests.dir
-/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/CMakeFiles/edit_cache.dir
