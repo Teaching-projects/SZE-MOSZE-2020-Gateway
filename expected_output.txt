@@ -1,6 +1,6 @@
-Rogi wins. Remaining HP: 369 Max HP: 465 DMG: 66 LVL: 4
-Igor wins. Remaining HP: 410 Max HP: 440 DMG: 44 LVL: 2
-Rogi wins. Remaining HP: 321 Max HP: 465 DMG: 66 LVL: 4
-Rogi wins. Remaining HP: 355 Max HP: 385 DMG: 55 LVL: 2
-Igor wins. Remaining HP: 311 Max HP: 440 DMG: 44 LVL: 2
-Rogi wins. Remaining HP: 355 Max HP: 385 DMG: 55 LVL: 2
+Rogi wins. Remaining HP: 383
+Igor wins. Remaining HP: 410
+Rogi wins. Remaining HP: 383
+Rogi wins. Remaining HP: 385
+Igor wins. Remaining HP: 311
+Rogi wins. Remaining HP: 385

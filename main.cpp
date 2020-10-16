@@ -34,10 +34,10 @@ int main (int argc, char** argv) {
   }
 
   if (monster1.isDefeated()) {
-    std::cout << monster2.getName() << " wins. Remaining HP: " << monster2.getaktHp() << " Max HP: " << monster2.getHp() << " DMG: " << monster2.getDmg() << " LVL: " << monster2.getLvl() << std::endl;
+    std::cout << monster2.getName() << " wins. Remaining HP: " << monster2.getaktHp() << std::endl;
   }
   else {
-    std::cout << monster1.getName() << " wins. Remaining HP: " << monster1.getaktHp() << " Max HP: " << monster1.getHp() << " DMG: " << monster1.getDmg() << " LVL: " << monster1.getLvl() << std::endl;
+    std::cout << monster1.getName() << " wins. Remaining HP: " << monster1.getaktHp() << std::endl;
   }
 
   return 0;
