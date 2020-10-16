@@ -13,7 +13,7 @@ private:
 
 public:
   void stringparser(const std::string &stringname);
-  void fileparser(std::string &filename);
+  void fileparser(const std::string &filename);
   void ifstreamparser(std::ifstream &ifstream);
   std::string readstring(const std::string &key) {
     return mymaps[key];
