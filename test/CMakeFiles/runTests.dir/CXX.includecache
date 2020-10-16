@@ -6,13 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/jsonparsertest.cpp
-parser.hpp
-/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/parser.hpp
-gtest/gtest.h
--
-
-/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/parser.hpp
+/home/martin/Asztal/SZE-MOSZE-2020-Gateway/parser.hpp
 iostream
 -
 fstream
@@ -20,5 +14,11 @@ fstream
 string
 -
 map
+-
+
+/home/martin/Asztal/SZE-MOSZE-2020-Gateway/test/jsonparsertest.cpp
+../parser.hpp
+/home/martin/Asztal/SZE-MOSZE-2020-Gateway/parser.hpp
+gtest/gtest.h
 -
 
