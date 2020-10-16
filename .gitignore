@@ -79,3 +79,8 @@ Temporary Items
 .out*
 results.txt
 /DOCS
+/test/CMakeFiles
+/test/cmake_install.cmake
+/test/CMakeCache.txt
+/test/Makefile
+/test/runTests
