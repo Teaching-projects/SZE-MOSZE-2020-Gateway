@@ -9,13 +9,21 @@ TEST(jsontest, wrong_input_test) {
 
 };
 
-TEST(jsontest, string_diff_test) {
+TEST(jsontest, diff_test) {
 
   Parser test;
 
+  Parser test2;
+
   test.fileparser("monster1.json");
 
-  ASSERT_NE(test.readstring("name"),"Rogi");
+  test2.fileparser("monster2.json");
+
+  ASSERT_NE(test.readstring("name"),test2.readstring("name"));
+
+  ASSERT_NE(test.readint("hp"),test2.readint("hp"));
+
+  ASSERT_NE(test.readint("dmg"),test2.readint("dmg"));
 
 };
 
