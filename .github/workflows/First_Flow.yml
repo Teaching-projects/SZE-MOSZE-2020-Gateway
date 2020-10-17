@@ -8,6 +8,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: g++ -Wall *.cpp -o a.out
+      - run: sudo apt-get install cppcheck
+      - run: sudo apt-get install valgrind
+      - run: g++ *.cpp -o a.out -Wall -Wextra -Werror -g
+      - run: cppcheck --error-exitcode=1 *.cpp --enable=warning
+      - run: cppcheck --output-file=cppcheckfile.txt *.cpp --enable=style,performance
+      - run: valgrind --track-origins=yes --leak-check=full --log-file=leaklogfile.txt --error-exitcode=1 ./a.out units/monster1.json units/monster2.json
+
+      - name: Uploading valgrind results
+        uses: actions/upload-artifact@v2
+        with:
+          name: leaklogfile
+          path: ./leaklogfile.txt
+
+      - name: Uploading cppcheck results
+        uses: actions/upload-artifact@v2
+        with:
+          name: cppcheck_results
+          path: ./cppcheckfile.txt
+
       - run: ./test.sh
       - run: diff results.txt expected_output.txt

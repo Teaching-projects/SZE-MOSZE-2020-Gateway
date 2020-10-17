@@ -78,3 +78,6 @@ Temporary Items
 # g++ compiler output
 .out*
 results.txt
+DOCS/
+a.out
+test/

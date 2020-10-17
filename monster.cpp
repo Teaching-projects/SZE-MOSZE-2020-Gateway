@@ -1,21 +1,54 @@
 #include "monster.hpp"
 #include <fstream>
 #include <iostream>
+#include <math.h>
 
-std::string Monster::getName() const { return name; }
+const std::string& Monster::getName() const { return name; }
 
-int Monster::getHp() const { return hp; }
+float Monster::getmaxHp() const { return maxhp; }
 
-int Monster::getDmg() const { return dmg; }
+float Monster::getDmg() const { return dmg; }
 
-// void Monster::hpDown(int dmg) { hp -= dmg; }
+float Monster::getaktHp() const { return akthp; }
 
-void Monster::monsterAttack(Monster &target) const {
-  if (hp > 0) target.hp -= getDmg();
+float Monster::getXp() const { return xp; }
+
+float Monster::getLvl() const { return lvl; }
+
+void Monster::monsterAttack(Monster &target) {
+  float pot_Xp = 0;
+
+  if (akthp <= 0) return;
+
+  if (target.akthp >= getDmg()) {
+    pot_Xp += getDmg();
+  }
+
+  else {
+    pot_Xp += target.akthp;
+  }
+
+  target.akthp -= getDmg();
+  
+  if (target.akthp < 0) {
+    target.akthp = 0;
+  }
+
+  xp += pot_Xp;
+  pot_Xp = 0;
+
+  if (xp >= lvl * 100) {
+    float mp = round(xp/100);
+    lvl += mp;
+    xp -= mp * 100;
+    maxhp = round(maxhp * pow(1.1,mp));
+    dmg = round(dmg * pow(1.1,mp));
+    akthp = maxhp;
+  }
 }
 
 bool Monster::isDefeated() const {
-  if (hp <= 0) return true;
+  if (akthp <= 0) return true;
   else return false;
 }
 
