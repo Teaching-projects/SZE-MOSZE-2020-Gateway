@@ -5,7 +5,7 @@
 
 const std::string& Monster::getName() const { return name; }
 
-float Monster::getHp() const { return hp; }
+float Monster::getmaxHp() const { return maxhp; }
 
 float Monster::getDmg() const { return dmg; }
 
@@ -13,32 +13,37 @@ float Monster::getaktHp() const { return akthp; }
 
 float Monster::getXp() const { return xp; }
 
-float Monster::getpot_Xp() const { return pot_Xp; }
-
 float Monster::getLvl() const { return lvl; }
 
 void Monster::monsterAttack(Monster &target) {
-  if (getaktHp() > 0) {
-    if (target.akthp >= getDmg()) {
-      pot_Xp += getDmg();
-    }
-    else {
-      pot_Xp += target.akthp;
-    }
-    target.akthp -= getDmg();
-    if (target.akthp < 0) {
-      target.akthp = 0;
-    }
-    xp += pot_Xp;
-    pot_Xp = 0;
-    if (xp >= lvl*100) {
-      float mp = floor(xp/100);
-      lvl += mp;
-      xp -= mp*100;
-      hp = floor(hp*pow(1.1,mp));
-      dmg = floor(dmg*pow(1.1,mp));
-      akthp = hp;
-    }
+  float pot_Xp = 0;
+
+  if (akthp <= 0) return;
+
+  if (target.akthp >= getDmg()) {
+    pot_Xp += getDmg();
+  }
+
+  else {
+    pot_Xp += target.akthp;
+  }
+
+  target.akthp -= getDmg();
+  
+  if (target.akthp < 0) {
+    target.akthp = 0;
+  }
+
+  xp += pot_Xp;
+  pot_Xp = 0;
+
+  if (xp >= lvl * 100) {
+    float mp = round(xp/100);
+    lvl += mp;
+    xp -= mp * 100;
+    maxhp = round(maxhp * pow(1.1,mp));
+    dmg = round(dmg * pow(1.1,mp));
+    akthp = maxhp;
   }
 }
 
