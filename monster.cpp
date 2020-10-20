@@ -1,20 +1,53 @@
 #include "monster.hpp"
 #include <fstream>
 #include <iostream>
+#include <math.h>
 
-std::string Monster::getName() const { return name; }
+const std::string& Monster::getName() const { return name; }
 
-int Monster::getHp() const { return hp; }
+float Monster::getmaxHp() const { return maxhp; }
 
-int Monster::getDmg() const { return dmg; }
+float Monster::getDmg() const { return dmg; }
 
-double Monster::getCd() const { return cd; }
+float Monster::getaktHp() const { return akthp; }
 
-double Monster::getCd_c() const { return cd_c; }
+float Monster::getXp() const { return xp; }
 
-void Monster::monsterAttack(Monster &target) const {
-  if (hp > 0) {
-    target.hp -= getDmg();
+float Monster::getLvl() const { return lvl; }
+
+float Monster::getCd() const { return cd; }
+
+float Monster::getCd_c() const { return cd_c; }
+
+void Monster::monsterAttack(Monster &target) {
+  float pot_Xp = 0;
+
+  if (akthp <= 0) return;
+
+  if (target.akthp >= getDmg()) {
+    pot_Xp += getDmg();
+  }
+
+  else {
+    pot_Xp += target.akthp;
+  }
+
+  target.akthp -= getDmg();
+
+  if (target.akthp < 0) {
+    target.akthp = 0;
+  }
+
+  xp += pot_Xp;
+  pot_Xp = 0;
+
+  if (xp >= lvl * 100) {
+    int mp = floor(xp/100);
+    lvl += mp;
+    xp -= mp * 100;
+    maxhp = round(maxhp * pow(1.1,mp));
+    dmg = round(dmg * pow(1.1,mp));
+    akthp = maxhp;
   }
 }
 
@@ -30,9 +63,8 @@ void Monster::monsterCd(Monster &target){
     cd_c = getCd();
   }
 }
-
 bool Monster::isDefeated() const {
-  if (hp <= 0) return true;
+  if (akthp <= 0) return true;
   else return false;
 }
 
@@ -42,9 +74,9 @@ Monster Monster::readJson(const std::string &filename) {
   if (file.is_open()) {
 
     std::string name;
-    int hp;
-    int dmg;
-    double cd;
+    float maxhp;
+    float dmg;
+    float cd;
     std::string line;
 
     std::getline(file,line);
@@ -60,20 +92,20 @@ Monster Monster::readJson(const std::string &filename) {
     std::getline(file,line);
     posColon = line.find(':');
     posComma = line.find(',');
-    hp = stoi(line.substr(posColon+2,(posComma-1)-(posColon+1)));
+    maxhp = stof(line.substr(posColon+2,(posComma-1)-(posColon+1)));
 
     std::getline(file,line);
     posColon = line.find(':');
     posComma = line.find(',');
-    dmg = stoi(line.substr(posColon+2));
+    dmg = stof(line.substr(posColon+2));
 
     std::getline(file,line);
     posColon = line.find(':');
-    cd = std::stod(line.substr(posColon+2));
+    cd = std::stof(line.substr(posColon+2));
 
     file.close();
 
-    Monster monster(name,hp,dmg,cd);
+    Monster monster(name,maxhp,dmg,cd);
     return monster;
   }
 
