@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['getcd',['getCd',['../classMonster.html#ac7588c67f88deadd0f7552059441d7a6',1,'Monster']]],
-  ['getcd_5fc',['getCd_c',['../classMonster.html#a2b8c9218fd3216af90883c9c8dfc573a',1,'Monster']]],
-  ['getdmg',['getDmg',['../classMonster.html#aec6c4d53d5c43f3b9571d355648c6d6e',1,'Monster']]],
-  ['gethp',['getHp',['../classMonster.html#a9c20c6af5d7503c994d8950a560f163b',1,'Monster']]],
-  ['getname',['getName',['../classMonster.html#a28ae1112e37262ce150e3c02465b3dd5',1,'Monster']]]
+  ['getakthp',['getaktHp',['../classMonster.html#ac4f06873bcc256dfcc141ebcdf95d041',1,'Monster']]],
+  ['getcd',['getCd',['../classMonster.html#a20b11d61dee3c55732c96478cd65bca4',1,'Monster']]],
+  ['getcd_5fc',['getCd_c',['../classMonster.html#a2a2ef65ab5e02372c4373e22c83b2603',1,'Monster']]],
+  ['getdmg',['getDmg',['../classMonster.html#ad68796fec99e61b89fe18a941b46f0b2',1,'Monster']]],
+  ['getlvl',['getLvl',['../classMonster.html#a86aafd6d380daea0530a3cffacdda150',1,'Monster']]],
+  ['getmaxhp',['getmaxHp',['../classMonster.html#a2c60669e4b3cfaa345db77ba5eaa44c9',1,'Monster']]],
+  ['getname',['getName',['../classMonster.html#a3d2f854307d2415c379d2e60ed482968',1,'Monster']]],
+  ['getpot_5fxp',['getpot_Xp',['../classMonster.html#ab828049d401a4cfcc88ae648baf837c0',1,'Monster']]],
+  ['getxp',['getXp',['../classMonster.html#aae1a64548c7659347ddc94b52d6c14a3',1,'Monster']]]
 ];
