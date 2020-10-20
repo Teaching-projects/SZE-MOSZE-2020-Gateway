@@ -15,6 +15,10 @@ float Monster::getXp() const { return xp; }
 
 float Monster::getLvl() const { return lvl; }
 
+float Monster::getCd() const { return cd; }
+
+float Monster::getCd_c() const { return cd_c; }
+
 void Monster::monsterAttack(Monster &target) {
   float pot_Xp = 0;
 
@@ -29,7 +33,7 @@ void Monster::monsterAttack(Monster &target) {
   }
 
   target.akthp -= getDmg();
-  
+
   if (target.akthp < 0) {
     target.akthp = 0;
   }
@@ -38,7 +42,7 @@ void Monster::monsterAttack(Monster &target) {
   pot_Xp = 0;
 
   if (xp >= lvl * 100) {
-    float mp = round(xp/100);
+    int mp = floor(xp/100);
     lvl += mp;
     xp -= mp * 100;
     maxhp = round(maxhp * pow(1.1,mp));
@@ -47,6 +51,18 @@ void Monster::monsterAttack(Monster &target) {
   }
 }
 
+void Monster::monsterCd(Monster &target){
+  if (cd_c >= 0.1) {
+    cd_c -= 0.1;
+  }
+  else {
+    if (target.cd_c == cd_c) {
+      monsterAttack(target);
+    }
+    monsterAttack(target);
+    cd_c = getCd();
+  }
+}
 bool Monster::isDefeated() const {
   if (akthp <= 0) return true;
   else return false;
@@ -58,8 +74,9 @@ Monster Monster::readJson(const std::string &filename) {
   if (file.is_open()) {
 
     std::string name;
-    int hp;
-    int dmg;
+    float maxhp;
+    float dmg;
+    float cd;
     std::string line;
 
     std::getline(file,line);
@@ -75,22 +92,24 @@ Monster Monster::readJson(const std::string &filename) {
     std::getline(file,line);
     posColon = line.find(':');
     posComma = line.find(',');
-    hp = stoi(line.substr(posColon+2,(posComma-1)-(posColon+1)));
+    maxhp = stof(line.substr(posColon+2,(posComma-1)-(posColon+1)));
 
     std::getline(file,line);
     posColon = line.find(':');
     posComma = line.find(',');
-    dmg = stoi(line.substr(posColon+2));
+    dmg = stof(line.substr(posColon+2));
+
+    std::getline(file,line);
+    posColon = line.find(':');
+    cd = std::stof(line.substr(posColon+2));
 
     file.close();
 
-    Monster monster(name,hp,dmg);
+    Monster monster(name,maxhp,dmg,cd);
     return monster;
-
   }
 
   else {
     throw std::invalid_argument("Invalid file name");
   }
-
 }

@@ -22,14 +22,11 @@ int main (int argc, char** argv) {
   Monster monster1 = Monster::readJson(argv[1]);
   Monster monster2 = Monster::readJson(argv[2]);
 
-  while ( (monster1.getaktHp() > 0) && (monster2.getaktHp() > 0) ) {
-
-    if (monster1.getaktHp() > 0) {
-      monster1.monsterAttack(monster2);
-    }
-
+  while ( (monster1.getaktHp() > 0) && (monster2.getaktHp() > 0) )
+  {
+    monster1.monsterCd(monster2);
     if (monster2.getaktHp() > 0) {
-      monster2.monsterAttack(monster1);
+      monster2.monsterCd(monster1);
     }
   }
 
