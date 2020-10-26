@@ -9,6 +9,8 @@ int Monster::getHp() const { return hp; }
 
 int Monster::getDmg() const { return dmg; }
 
+float Monster::getAttackcooldown()const{return attackcooldown;}
+
 void Monster::monsterAttack(Monster &target) const {
   if (hp > 0) target.hp -= getDmg();
 }
@@ -20,6 +22,6 @@ bool Monster::isDefeated() const {
 
 Monster Monster::readJson(const std::string &filename) {
   Parser json;
-  json.fileparser(filename);
-  return Monster(json.readstring("name"), json.readint("hp"), json.readint("dmg"));
+  std::map<std::string, std::string> data =json.Fileparse(filename);
+  return Monster(data["name"], std::stoi(data["hp"]), std::stoi(data["dmg"]), std::stof(data["attackcooldown"]));
 }
