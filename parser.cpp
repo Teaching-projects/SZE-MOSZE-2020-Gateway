@@ -91,7 +91,7 @@ std::map<std::string, std::string> Parser::Stringparse(const std::string &input)
     while ((pos = text.find("\"")) != std::string::npos)
     {
         token = text.substr(0, pos);
-        token = Trim(token);
+        token = T(token);
         data.push_back(token);
         text.erase(0, pos + 1);
     }
