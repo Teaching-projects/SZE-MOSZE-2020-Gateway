@@ -1,32 +1,32 @@
 #include "../parser.hpp"
 #include <gtest/gtest.h>
 
-TEST(JsonTest, Filetest)
+TEST(ParserTest, Filetest)
 {
-    ASSERT_THROW(Json::Fileparse("badmonster1.json"), std::runtime_error);
-    ASSERT_NO_THROW(Json::Fileparse("../unit/monster1.json"));
+    ASSERT_THROW(Parser::Fileparse("badmonster1.json"), std::runtime_error);
+    ASSERT_NO_THROW(Parser::Fileparse("../unit/monster1.json"));
 }
-TEST(JsonTest, Stringparse)
+TEST(ParserTest, Stringparse)
 {
-    std::map<std::string, std::string> data = Json::Stringparse("{    \"name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000}");
+    std::map<std::string, std::string> data = Parser::Stringparse("{    \"name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000}");
     ASSERT_EQ(data["name"], "Bicska");
     ASSERT_EQ(data["hp"], "45000");
     ASSERT_EQ(data["dmg"], "1000");
 }
-TEST(JsonTest, Valid)
+TEST(ParserTest, Valid)
 {
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_THROW(Json::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
-    ASSERT_NO_THROW(Json::Valid("{    \"name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000}"));
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_THROW(Parser::Valid("{    name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000 }"), std::runtime_error);
+    ASSERT_NO_THROW(Parser::Valid("{    \"name\" : \"Bicska\",    \"hp\" : 45000,    \"dmg\" : 1000}"));
 }
 
 int main(int argc, char **argv)
