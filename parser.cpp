@@ -109,7 +109,7 @@ std::map<std::string, std::string> Parser::Streamparse(std::istream &stream)
     {
         text.append(currentLine);
     }
-    return ParseString(text);
+    return Stringparse(text);
 }
 std::map<std::string, std::string> Parser::Fileparse(const std::string &filename)
 {
