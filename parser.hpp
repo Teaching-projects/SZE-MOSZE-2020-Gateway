@@ -5,22 +5,15 @@
 #include <fstream>
 #include <string>
 #include <map>
+#include <regex>
 
 class Parser {
-private:
-  std::map<std::string, std::string> mymaps;
-  std::map<std::string, int> mymapi;
-
 public:
-  void stringparser(const std::string &stringname);
-  void fileparser(const std::string &filename);
-  void ifstreamparser(std::ifstream &ifstream);
-  std::string readstring(const std::string &key) {
-    return mymaps[key];
-  }
-  int readint(const std::string &key) {
-    return mymapi[key];
-  }
+    static void Valid(const std::string &text);
+    static std::string T(const std::string &text);
+    static std::map<std::string, std::string> Stringparse(const std::string &input);
+    static std::map<std::string, std::string> Streamparse(std::istream &stream);
+    static std::map<std::string, std::string> Fileparse(const std::string &filename);
 };
 
 #endif

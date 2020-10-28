@@ -23,19 +23,20 @@ int main (int argc, char** argv) {
   Monster monster1 = Monster::readJson(argv[1]);
   Monster monster2 = Monster::readJson(argv[2]);
 
-  while ( (monster1.getHp() > 0) && (monster2.getHp() > 0) ) {
-
-    if (monster1.getHp() > 0) {
-      monster1.monsterAttack(monster2);
-    }
-
-    if (monster2.getHp() > 0) {
-      monster2.monsterAttack(monster1);
+  while ( (monster1.getaktHp() > 0) && (monster2.getaktHp() > 0) )
+  {
+    monster1.monsterCd(monster2);
+    if (monster2.getaktHp() > 0) {
+      monster2.monsterCd(monster1);
     }
   }
 
-  if (monster1.isDefeated() == true) { std::cout << monster2.getName() << " wins. Remaining HP: " << monster2.getHp() << std::endl; }
-  else { std::cout << monster1.getName() << " wins. Remaining HP: " << monster1.getHp() << std::endl; }
+  if (monster1.isDefeated()) {
+    std::cout << monster2.getName() << " wins. Remaining HP: " << monster2.getaktHp() << std::endl;
+  }
+  else {
+    std::cout << monster1.getName() << " wins. Remaining HP: " << monster1.getaktHp() << std::endl;
+  }
 
   return 0;
 }
