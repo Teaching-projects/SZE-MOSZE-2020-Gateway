@@ -49,7 +49,7 @@ protected:
 public:
 
   /// This is the constructor
-  Monster(const std::string &n, const float &h, const float &d, const double& c) : name(n), maxhp(h), dmg(d), cd(c), akthp(h){}
+  Monster(const std::string &n, const float &h, const float &d, const float& c) : name(n), maxhp(h), dmg(d), cd(c), akthp(h){}
   /// This is a simple getter for a monsters name
   const std::string &getName() const;
   /// This is a simple getter for a monsters max health points
@@ -85,7 +85,7 @@ public:
    * \param none
    *
    * \return true if the monster is dead
-   * \return false if its not dead 
+   * \return false if its not dead
    */
   bool isDefeated() const;
 

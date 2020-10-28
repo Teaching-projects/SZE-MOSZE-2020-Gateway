@@ -72,5 +72,5 @@ bool Monster::isDefeated() const {
 Monster Monster::readJson(const std::string &filename) {
   Parser json;
   std::map<std::string, std::string> data = json.Fileparse(filename);
-  return Monster(data["name"], std::stoi(data["hp"]), std::stoi(data["dmg"]), std::stoi(data["cd"]));
+  return Monster(data["name"], std::stoi(data["hp"]), std::stoi(data["dmg"]), std::stof(data["cd"]));
 }
