@@ -1,4 +1,5 @@
 #include "monster.hpp"
+#include "parser.hpp"
 #include <fstream>
 #include <iostream>
 #include <math.h>
@@ -69,47 +70,7 @@ bool Monster::isDefeated() const {
 }
 
 Monster Monster::readJson(const std::string &filename) {
-  std::ifstream file(filename);
-
-  if (file.is_open()) {
-
-    std::string name;
-    float maxhp;
-    float dmg;
-    float cd;
-    std::string line;
-
-    std::getline(file,line);
-
-    int posColon;
-    int posComma;
-
-    std::getline(file,line);
-    posColon = line.find(':');
-    posComma = line.find(',');
-    name = line.substr(posColon+3,(posComma-1)-(posColon+3));
-
-    std::getline(file,line);
-    posColon = line.find(':');
-    posComma = line.find(',');
-    maxhp = stof(line.substr(posColon+2,(posComma-1)-(posColon+1)));
-
-    std::getline(file,line);
-    posColon = line.find(':');
-    posComma = line.find(',');
-    dmg = stof(line.substr(posColon+2));
-
-    std::getline(file,line);
-    posColon = line.find(':');
-    cd = std::stof(line.substr(posColon+2));
-
-    file.close();
-
-    Monster monster(name,maxhp,dmg,cd);
-    return monster;
-  }
-
-  else {
-    throw std::invalid_argument("Invalid file name");
-  }
+  Parser json;
+  std::map<std::string, std::string> data = json.Fileparse(filename);
+  return Monster(data["name"], std::stoi(data["hp"]), std::stoi(data["dmg"]), std::stof(data["cd"]));
 }

@@ -49,7 +49,7 @@ protected:
 public:
 
   /// This is the constructor
-  Monster(const std::string &n, const float &h, const float &d, const double& c) : name(n), maxhp(h), dmg(d), cd(c), akthp(h){}
+  Monster(const std::string &n, const float &h, const float &d, const float& c) : name(n), maxhp(h), dmg(d), cd(c), akthp(h){}
   /// This is a simple getter for a monsters name
   const std::string &getName() const;
   /// This is a simple getter for a monsters max health points
@@ -72,19 +72,19 @@ public:
   /**
    * \brief This is the main part of the cooldown counter program
    *
-   * \param target It is a monster type.
+   * \param target It is a monster type
    *
-   * In this function we watch the cooldown counter, and we decrease its number until it reaches 0.
-   * If the number reaches 0, we hit the other monster, and we reset its cooldown and start again until one of the monster is not dead.
+   * In this function we watch the cooldown counter, and we decrease its number until it reaches 0
+   * If the number reaches 0, we hit the other monster and we reset its cooldown and start again until one of the monster is not dead
    */
   void monsterCd(Monster &target);
 
   /**
-   * \brief This function is called to decide which monsters is dead
+   * \brief This function is called to decide which monster is isdead
    *
    * \param none
    *
-   * \return true if the monsters is dead
+   * \return true if the monster is dead
    * \return false if its not dead
    */
   bool isDefeated() const;

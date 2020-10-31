@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "monster.hpp"
+#include "parser.hpp"
 
 int main (int argc, char** argv) {
 
