@@ -1,5 +1,5 @@
-#include "monster.hpp"
-#include "parser.hpp"
+#include "Monster.h"
+#include "JSON.h"
 #include <fstream>
 #include <iostream>
 #include <math.h>
