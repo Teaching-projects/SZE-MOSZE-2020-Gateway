@@ -9,4 +9,6 @@ jobs:
     container: hmartin28/mosze:latest
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Unit test
         run: make unit_test

@@ -16,6 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Documentation
       run: make documentation
 
     - name: Push git subdirectory as branch
