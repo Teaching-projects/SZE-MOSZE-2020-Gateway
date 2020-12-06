@@ -1,11 +1,17 @@
 OBJS := main.o Monster.o Hero.o JSON.o
 CFLAGS := -Wall -Wextra -std=c++17
 CC := g++ 
-DOX := doxconf
-UNITS_DIR := units
-TESTS_DIR := test
+ALL := *.cpp
 EXE := a.out
 SCRIPT := test.sh
+
+UNITS_DIR := units
+TESTS_DIR := test
+
+DOX := doxconf
+
+VAL_OUT := leaklogfile.txt
+CPPC_OUT := cppcheckfile.txt
 
 a.out: $(OBJS)
 	$(CC) $(CFLAGS) -o a.out $(OBJS)
@@ -23,19 +29,19 @@ JSON.o: JSON.cpp
 	$(CC) $(CFLAGS) -c JSON.cpp
 
 clean:
-	rm -rf *.o $(EXE) cppcheckfile.txt leaklogfile.txt
+	rm -rf *.o $(EXE) $(CPPC_OUT) $(VAL_OUT)
 
 documentation:
 	doxygen $(DOX)
 	@echo "Documentation: DONE"
 
 valgrind:
-	valgrind --track-origins=yes --leak-check=full --log-file=leaklogfile.txt --error-exitcode=1 ./$(EXE) $(UNITS_DIR)/Eivar.json $(UNITS_DIR)/Sigurd.json
+	valgrind --track-origins=yes --leak-check=full --log-file=$(VAL_OUT) --error-exitcode=1 ./$(EXE) $(UNITS_DIR)/Eivar.json $(UNITS_DIR)/Sigurd.json
 	@echo "Valgrind: DONE"
 
 cppcheck:
-	cppcheck --error-exitcode=1 *.cpp --enable=warning
-	cppcheck --output-file=cppcheckfile.txt *.cpp --enable=style,performance
+	cppcheck --error-exitcode=1 $(ALL) --enable=warning
+	cppcheck --output-file=$(CPPC_OUT) $(ALL) --enable=style,performance
 	@echo "Cppcheck: DONE"
 
 unit_test:
