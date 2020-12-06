@@ -9,9 +9,10 @@ jobs:
     container: hmartin28/mosze:latest
     steps:
       - uses: actions/checkout@v2
-      - run: cppcheck --error-exitcode=1 *.cpp --enable=warning
-      - run: cppcheck --output-file=cppcheckfile.txt *.cpp --enable=style,performance
-      - run: valgrind --track-origins=yes --leak-check=full --log-file=leaklogfile.txt --error-exitcode=1 ./a.out units/Eivar.json units/Sigurd.json
+
+      - name: Cppcheck and valgrind
+          run: make cppcheck
+          run: make valgrind
 
       - name: Uploading valgrind results
         uses: actions/upload-artifact@v2
@@ -25,5 +26,5 @@ jobs:
           name: cppcheck_results
           path: ./cppcheckfile.txt
 
-      - run: ./test.sh
-      - run: diff results.txt expected_output.txt
+      - name: Diff test
+          run: make diff_test

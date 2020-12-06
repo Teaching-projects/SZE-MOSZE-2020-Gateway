@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - run: doxygen doxconf
+      run: make documentation
 
     - name: Push git subdirectory as branch
 

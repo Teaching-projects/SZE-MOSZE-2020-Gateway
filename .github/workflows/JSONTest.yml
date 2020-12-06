@@ -9,7 +9,4 @@ jobs:
     container: hmartin28/mosze:latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make
-      - run: sudo ln -st /usr/lib/ /usr/src/gtest/libgtest.a
-      - run: sudo ln -st /usr/lib/ /usr/src/gtest/libgtest_main.a
-      - run: cd test && cmake CMakeLists.txt && make && ./runTests
+        run: make unit_test
