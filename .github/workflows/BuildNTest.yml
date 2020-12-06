@@ -4,37 +4,37 @@ on:
   push
 
 jobs:
-  Code test:
-    name: Code test
+  Code_test:
+    name: Code_test
     runs-on: ubuntu-latest
     container: hmartin28/mosze:latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run valgrind
+      - name: Run_valgrind
         run: make valgrind
 
-      - name: Uploading valgrind results
+      - name: Uploading_valgrind_results
         uses: actions/upload-artifact@v2
         with:
           name: leaklogfile
           path: ./leaklogfile.txt
 
-      - name: Run cppcheck
+      - name: Run_cppcheck
         run: make cppcheck
 
-      - name: Uploading cppcheck results
+      - name: Uploading_cppcheck_results
         uses: actions/upload-artifact@v2
         with:
           name: cppcheck_results
           path: ./cppcheckfile.txt
 
   Diff test:
-    name: Diff test
+    name: Diff_test
     runs-on: ubuntu-latest
     container: hmartin28/mosze:latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Diff test
+      - name: Diff_test
         run: make diff_test
