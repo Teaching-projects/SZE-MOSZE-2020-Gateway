@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Monster.h"
+#include "Hero.h"
 #include "JSON.h"
 
 int main (int argc, char** argv) {
@@ -10,23 +11,36 @@ int main (int argc, char** argv) {
   }
 
   try {
-    Monster monster1 = Monster::readJson(argv[1]);
-    Monster monster2 = Monster::readJson(argv[2]);
+    Hero hero = Hero::readJson(argv[1]);
+    Monster monster = Monster::readJson(argv[2]);
 
-    while ( (monster1.getaktHp() > 0) && (monster2.getaktHp() > 0) )
-  {
-    monster1.monsterCd(monster2);
-    if (monster2.getaktHp() > 0) {
-      monster2.monsterCd(monster1);
+    std::cout << "------------------------------------------------------" << std::endl;
+    std::cout << '\t' << hero.getName()
+    << " HP: " << hero.getHp()
+    << " DMG: " << hero.getDmg()
+    << " CD: " << hero.getCd() 
+    << " LVL: " << hero.getLevel() << std::endl;
+    std::cout << "------------------------------------------------------" << std::endl;
+
+    std::cout << "------------------------------------------------------" << std::endl;
+    std::cout << '\t' << monster.getName()
+    << " HP: " << monster.getHp()
+    << " DMG: " << monster.getDmg()
+    << " CD: " << monster.getCd() << std::endl;
+    std::cout << "------------------------------------------------------" << std::endl << std::endl;
+
+    while ( hero.isAlive() && monster.isAlive() ) {
+      hero.fightTilDeath(monster);
     }
-  }
 
-  if (monster1.isDefeated()) {
-    std::cout << monster2.getName() << " wins. Remaining HP: " << monster2.getaktHp() << std::endl;
-  }
-  else {
-    std::cout << monster1.getName() << " wins. Remaining HP: " << monster1.getaktHp() << std::endl;
-  }
+    if (hero.isAlive()) {
+      std::cout << hero.getName() << " wins. Remaining HP: " << hero.getHp()
+      << " | MAXHP: " << hero.getMaxHp() << ", DMG: " << hero.getDmg() << ", LVL: " << hero.getLevel() << " |" << std::endl << std::endl;
+    }
+
+    else {
+      std::cout << monster.getName() << " wins. Remaining HP: " << monster.getHp() << std::endl;
+    }
   }
 
   catch (const std::invalid_argument &exception) {
