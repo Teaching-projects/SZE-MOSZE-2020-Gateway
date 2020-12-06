@@ -1,17 +1,17 @@
-name: Building and testing
+name: Valgrind, cppcheck and diff test
 
 on:
   push
 
 jobs:
-  Build_And_Test:
+  Code test:
+    name: Code test
     runs-on: ubuntu-latest
     container: hmartin28/mosze:latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cppcheck and valgrind
-        run: make cppcheck
+      - name: Run valgrind
         run: make valgrind
 
       - name: Uploading valgrind results
@@ -20,11 +20,19 @@ jobs:
           name: leaklogfile
           path: ./leaklogfile.txt
 
+      - name: Run cppcheck
+        run: make cppcheck
+
       - name: Uploading cppcheck results
         uses: actions/upload-artifact@v2
         with:
           name: cppcheck_results
           path: ./cppcheckfile.txt
 
-      - name: Diff test
+  Diff test:
+    name: Diff test
+    runs-on: ubuntu-latest
+    container: hmartin28/mosze:latest
+    steps:
+      - uses: actions/checkout@v2
         run: make diff_test
