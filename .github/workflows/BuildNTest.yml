@@ -1,5 +1,4 @@
-
-name: First_Flow
+name: Building and testing
 
 on:
   push
@@ -11,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: sudo apt-get install cppcheck
       - run: sudo apt-get install valgrind
-      - run: g++ *.cpp -o a.out -Wall -Wextra -Werror -g
+      - run: g++ -std=c++17 *.cpp -o a.out -Wall -Wextra -Werror -g
       - run: cppcheck --error-exitcode=1 *.cpp --enable=warning
       - run: cppcheck --output-file=cppcheckfile.txt *.cpp --enable=style,performance
       - run: valgrind --track-origins=yes --leak-check=full --log-file=leaklogfile.txt --error-exitcode=1 ./a.out units/Eivar.json units/Sigurd.json

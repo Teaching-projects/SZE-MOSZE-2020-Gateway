@@ -1,4 +1,4 @@
-name: jsontest
+name: JSON Test
 
 on:
   push
