@@ -20,7 +20,6 @@ public:
         : Monster(n,h,d,c), maxhp(h) {}
 
     void fightTilDeath(Monster& target);
-    void potentionalXp(Monster& target);
     static Hero readJson(const std::string& filename);
 
     float getLevel() const;

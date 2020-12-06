@@ -1,7 +1,6 @@
 #include "Hero.h"
 #include "JSON.h"
 #include <cmath>
-#include <sstream>
 
 float Hero::getLevel() const { return level; }
 

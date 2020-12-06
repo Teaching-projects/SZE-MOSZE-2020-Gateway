@@ -1,7 +1,5 @@
 #include "Monster.h"
 #include "JSON.h"
-#include <fstream>
-#include <iostream>
 
 const std::string& Monster::getName() const { return name; }
 
