@@ -1,6 +1,6 @@
 OBJS := main.o Monster.o Hero.o JSON.o
 CFLAGS := -Wall -Wextra -std=c++17
-CC := g++-9
+CCX := g++-9
 ALL := *.cpp
 EXE := a.out
 SCRIPT := test.sh
@@ -14,19 +14,19 @@ VAL_OUT := leaklogfile.txt
 CPPC_OUT := cppcheckfile.txt
 
 a.out: $(OBJS)
-	$(CC) $(CFLAGS) -o a.out $(OBJS)
+	$(CCX) $(CFLAGS) -o a.out $(OBJS)
 
 main.o: main.cpp
-	$(CC) $(CFLAGS) -c main.cpp
+	$(CCX) $(CFLAGS) -c main.cpp
 
 Monster.o: Monster.cpp 
-	$(CC) $(CFLAGS) -c Monster.cpp
+	$(CCX) $(CFLAGS) -c Monster.cpp
 
 Hero.o: Hero.cpp
-	$(CC) $(CFLAGS) -c Hero.cpp 
+	$(CCX) $(CFLAGS) -c Hero.cpp 
 
 JSON.o: JSON.cpp
-	$(CC) $(CFLAGS) -c JSON.cpp
+	$(CCX) $(CFLAGS) -c JSON.cpp
 
 clean:
 	rm -rf *.o $(EXE) $(CPPC_OUT) $(VAL_OUT)
