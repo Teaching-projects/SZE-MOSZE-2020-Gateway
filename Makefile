@@ -31,6 +31,7 @@ documentation:
 
 valgrind:
 	valgrind --track-origins=yes --leak-check=full --log-file=leaklogfile.txt --error-exitcode=1 ./$(EXE) $(UNITS_DIR)/Eivar.json $(UNITS_DIR)/Sigurd.json
+	@echo "Valgrind: DONE"
 
 cppcheck:
 	cppcheck --error-exitcode=1 *.cpp --enable=warning
