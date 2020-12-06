@@ -1,10 +1,10 @@
 #!/bin/bash
 
-./a.out units/monster1.json units/monster2.json > results.txt
-./a.out units/monster1.json units/monster3.json >> results.txt
+./a.out units/Eivar.json units/Sigurd.json > results.txt
+./a.out units/Eivar.json units/Ubba.json >> results.txt
 
-./a.out units/monster2.json units/monster1.json >> results.txt
-./a.out units/monster2.json units/monster3.json >> results.txt
+./a.out units/Sigurd.json units/monster1.json >> results.txt
+./a.out units/Sigurd.json units/Ubba.json >> results.txt
 
-./a.out units/monster3.json units/monster1.json >> results.txt
-./a.out units/monster3.json units/monster2.json >> results.txt
+./a.out units/Ubba.json units/monster1.json >> results.txt
+./a.out units/Ubba.json units/Sigurd.json >> results.txt

@@ -4,7 +4,7 @@
 TEST(ParserTest, Filetest)
 {
     ASSERT_THROW(Parser::Fileparse("xy.json"), std::runtime_error);
-    ASSERT_NO_THROW(Parser::Fileparse("../units/monster1.json"));
+    ASSERT_NO_THROW(Parser::Fileparse("../units/Eivar.json"));
 }
 TEST(ParserTest, Stringparse)
 {
