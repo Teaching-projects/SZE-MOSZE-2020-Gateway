@@ -20,7 +20,6 @@ jobs:
       run: make documentation
 
     - name: Push git subdirectory as branch
-
       uses: s0/git-publish-subdir-action@v2.4.0
 
       env:
