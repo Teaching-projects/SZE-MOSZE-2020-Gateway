@@ -17,4 +17,5 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   graphviz \
   libgtest-dev \
   git \
+  ca-certificates \
   && rm -rf /var/lib/apt/lists/*
