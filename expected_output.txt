@@ -1,6 +1,6 @@
-Rogi wins. Remaining HP: 1767
-Igorrogi wins. Remaining HP: 3464
-Rogi wins. Remaining HP: 1741
-Igorrogi wins. Remaining HP: 34514
-Igorrogi wins. Remaining HP: 3497
-Igorrogi wins. Remaining HP: 7439
+Eivar wins. Remaining HP: 20962
+Eivar wins. Remaining HP: 4123
+Eivar wins. Remaining HP: 21040
+Sigurd wins. Remaining HP: 28688
+Eivar wins. Remaining HP: 4134
+Sigurd wins. Remaining HP: 28701
