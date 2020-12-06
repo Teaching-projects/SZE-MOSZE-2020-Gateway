@@ -4,13 +4,13 @@
 
 float Hero::getLevel() const { return level; }
 
-float Hero::getMaxHp() const { return maxhp; }
+float Hero::getMaxHp() const { return max_health_points; }
 
 void Hero::attack(Monster& target) {
   if (isAlive() && canHit()) {
-    hpDown(target,dmg);
+    hpDown(target,damage);
     if (target.getHp() > getDmg()) {
-      xp += dmg;
+      xp += damage;
     }
     else if (target.getHp() <= getDmg()) {
       xp += target.getHp();
@@ -19,9 +19,9 @@ void Hero::attack(Monster& target) {
       int mp = floor(xp / 100);
       level += mp;
       xp -= mp * 100;
-      maxhp += 20;
-      dmg += 2;
-      hp = maxhp;
+      max_health_points += 20;
+      damage += 2;
+      health_points = max_health_points;
     }
   }
   resetTheCooldown();

@@ -3,18 +3,18 @@
 
 const std::string& Monster::getName() const { return name; }
 
-float Monster::getHp() const { return hp; }
+float Monster::getHp() const { return health_points; }
 
-float Monster::getDmg() const { return dmg; }
+float Monster::getDmg() const { return damage; }
 
-float Monster::getCd() const { return cd; }
+float Monster::getCd() const { return cooldown; }
 
 float Monster::getTimer() const { return timer; }
 
-void Monster::hpDown(Monster& unit, const float& dmg) {
-  unit.hp -= dmg;
-  if (unit.hp < 0) {
-    unit.hp = 0;
+void Monster::hpDown(Monster& unit, const float& damage) {
+  unit.health_points -= damage;
+  if (unit.health_points < 0) {
+    unit.health_points = 0;
   }
 }
 
@@ -30,7 +30,7 @@ bool Monster::canHit() const { return timer <= 0; }
 
 void Monster::attack(Monster& target) {
   if (isAlive() && canHit()) {
-    hpDown(target,dmg);
+    hpDown(target,damage);
     resetTheCooldown();
   }
 }
