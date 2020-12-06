@@ -1,6 +1,6 @@
 OBJS := main.o Monster.o Hero.o JSON.o
 CFLAGS := -Wall -Wextra -std=c++17
-CC := g++ 
+CC := g++-9
 ALL := *.cpp
 EXE := a.out
 SCRIPT := test.sh
