@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['cd',['cd',['../classMonster.html#a17a34c79f7e7127305fbce0526b8dfde',1,'Monster']]],
-  ['cd_5fc',['cd_c',['../classMonster.html#a45e2e7c2b9075936878d73fc3c7d227a',1,'Monster']]]
+  ['canhit_1',['canHit',['../classMonster.html#af22f7198f2b84e66de63b052f1da33db',1,'Monster']]],
+  ['cooldown_2',['cooldown',['../classMonster.html#a3299915749c117d00b28414f669197b3',1,'Monster']]]
 ];

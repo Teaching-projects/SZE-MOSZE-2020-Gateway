@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['monster',['Monster',['../classMonster.html#a65b782a95affccf4ed4a4d3fbc56df3d',1,'Monster']]],
-  ['monsterattack',['monsterAttack',['../classMonster.html#acbb8d0eb1e634f759f4a6ee05e484721',1,'Monster']]],
-  ['monstercd',['monsterCd',['../classMonster.html#ac54d67463cabd019ae7194b9adbc2064',1,'Monster']]]
+  ['fighttildeath_34',['fightTilDeath',['../classHero.html#a9b26ace444d1317730bb40ea1ea457ab',1,'Hero']]],
+  ['fileparse_35',['Fileparse',['../classParser.html#a5f0338399c3c679d6a21f94e4acbeb6d',1,'Parser']]]
 ];

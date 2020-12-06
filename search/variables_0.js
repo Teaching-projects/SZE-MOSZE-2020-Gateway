@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['akthp',['akthp',['../classMonster.html#a576eea55463364cbb6ae9a2547e3ec26',1,'Monster']]]
+  ['cooldown_54',['cooldown',['../classMonster.html#a3299915749c117d00b28414f669197b3',1,'Monster']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dmg',['dmg',['../classMonster.html#a95871fedccc2093d243a93c888dab08c',1,'Monster']]]
+  ['health_5fpoints_56',['health_points',['../classMonster.html#a5edbc1eb86e408a6997c3eb4441e5f29',1,'Monster']]]
 ];

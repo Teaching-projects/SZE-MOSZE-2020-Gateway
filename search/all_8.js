@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readjson',['readJson',['../classMonster.html#a225f0c60693e4f20e05d95514e67e398',1,'Monster']]]
+  ['name_18',['name',['../classMonster.html#a4ce38cc9d6af5a37f54f90d2d7ab8ee0',1,'Monster']]]
 ];
