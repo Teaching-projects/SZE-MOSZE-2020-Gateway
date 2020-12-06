@@ -35,4 +35,6 @@ jobs:
     container: hmartin28/mosze:latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Diff test
         run: make diff_test
