@@ -59,4 +59,4 @@ Eivar wins. Remaining HP: 900 | MAXHP: 1060, DMG: 46, LVL: 8 |
 The test script runs all the possible fights, and in the BuildNTest.yml file theres a diff test, which compare the *results.txt* and the *expected_output.txt* to check if theres a difference between them. If yes, it says, whats the difference between the text files.
   
 # Documentation
-[Click here to open the documentation](https://teaching-projects.github.io/SZE-MOSZE-2020-Gateway/pages.html)
+[Click here to open the documentation](https://teaching-projects.github.io/SZE-MOSZE-2020-Gateway--Closed/)
