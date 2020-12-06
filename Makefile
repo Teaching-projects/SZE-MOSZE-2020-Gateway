@@ -6,7 +6,7 @@ EXE := a.out
 SCRIPT := test.sh
 
 UNITS_DIR := units
-TESTS_DIR := test
+TESTS_DIR := test/
 
 DOX := doxconf
 
