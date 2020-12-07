@@ -3,8 +3,6 @@
 
 void Parser::Valid(const std::string &text)
 {
-    int quote = 0;
-    int j = 0;
     int start = text.find('{');
     int end = text.find('}');
     if (start == -1)
@@ -15,6 +13,8 @@ void Parser::Valid(const std::string &text)
 
     if ((tritext.find('{') != std::string::npos && tritext.find('}') != std::string::npos) && (kpont == (dnumber + 1)))
     {
+        int quote = 0;
+        int j = 0;
         tritext.erase(tritext.end() - 1);
         tritext.append(",}");
         for (int i = 0; i < kpont; i++)

@@ -1,12 +1,12 @@
 OBJS := main.o Monster.o Hero.o JSON.o
 CFLAGS := -Wall -Wextra -std=c++17
-CXX := g++-9
+CXX := g++
 ALL := *.cpp
 EXE := a.out
 SCRIPT := test.sh
 
 UNITS_DIR := units
-TESTS_DIR := test/
+TESTS_DIR := test
 
 DOX := doxconf
 
@@ -44,11 +44,11 @@ cppcheck:
 	cppcheck --output-file=$(CPPC_OUT) $(ALL) --enable=style,performance
 	@echo "Cppcheck: DONE"
 
-unit_test: 
+unit_test:
 	cd $(TESTS_DIR) && \
-	cmake CMakeLists.txt && \
-	make && \
-	./runTests
+	sudo cmake CMakeLists.txt && \
+	sudo $(MAKE) && \
+	sudo ./runTests
 	@echo "Unit test: DONE"
 
 diff_test: $(EXE)

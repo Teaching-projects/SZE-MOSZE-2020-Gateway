@@ -9,10 +9,10 @@ float Hero::getMaxHp() const { return max_health_points; }
 void Hero::attack(Monster& target) {
   if (isAlive() && canHit()) {
     hpDown(target,damage);
-    if (target.getHp() > getDmg()) {
+    if (target.getHp() >= getDmg()) {
       xp += damage;
     }
-    else if (target.getHp() <= getDmg()) {
+    else {
       xp += target.getHp();
     }
     if (xp >= level * 100) {
