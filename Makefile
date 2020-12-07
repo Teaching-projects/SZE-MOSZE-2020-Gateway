@@ -46,9 +46,9 @@ cppcheck:
 
 unit_test:
 	cd $(TESTS_DIR) && \
-	sudo cmake CMakeLists.txt && \
-	sudo $(MAKE) && \
-	sudo ./runTests
+	cmake CMakeLists.txt && \
+	make && \
+	./runTests
 	@echo "Unit test: DONE"
 
 diff_test: $(EXE)
