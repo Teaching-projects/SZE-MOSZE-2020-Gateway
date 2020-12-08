@@ -96,9 +96,9 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a class for parsing the datas. </p>
 <p>This class includes the different type of parsers.</p>
-<dl class="section author"><dt>Author</dt><dd>hmartin28</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Bitchka98</dd></dl>
 <dl class="section version"><dt>Version</dt><dd>3.0</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2020/12/06 12:09 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2020/12/08 08:45 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5f0338399c3c679d6a21f94e4acbeb6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f0338399c3c679d6a21f94e4acbeb6d">&#9670;&nbsp;</a></span>Fileparse()</h2>
@@ -127,10 +127,11 @@ Static Public Member Functions</h2></td></tr>
 <p>This parses the file, calling the streamparse. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td></td></tr>
+    <tr><td class="paramname">filename</td><td>First it checks if the file is good. If its not, it throws and exception. Then it calls the Streamparse function for the read file, and then put it in a map called d, and then returns this d.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>d </dd></dl>
 
 </div>
 </div>
@@ -161,10 +162,11 @@ Static Public Member Functions</h2></td></tr>
 <p>This appends the curent line for the text. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td></td></tr>
+    <tr><td class="paramname">stream</td><td>It appends the current line for the text and after that it returns the previous function with this text.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Stringparse(text) </dd></dl>
 
 </div>
 </div>
@@ -195,10 +197,11 @@ Static Public Member Functions</h2></td></tr>
 <p>This parses the read text, from the given input. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td></td></tr>
+    <tr><td class="paramname">input</td><td>After it calls the Valid function, it puts the keys, and datas in the map and returns it.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>mapData </dd></dl>
 
 </div>
 </div>
@@ -229,10 +232,11 @@ Static Public Member Functions</h2></td></tr>
 <p>Finds the texts front and end, and removes the whitespaces. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td></td></tr>
+    <tr><td class="paramname">text</td><td>Checks the text from the front to the end, and if it sees a whitespace, it removes it.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -263,7 +267,7 @@ Static Public Member Functions</h2></td></tr>
 <p>This checks if the given text is valid. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td></td></tr>
+    <tr><td class="paramname">text</td><td>It finds the key points of the JSON and if it sees an error in their number or place it throws an exception. </td></tr>
   </table>
   </dd>
 </dl>
