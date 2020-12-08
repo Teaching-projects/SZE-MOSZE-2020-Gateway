@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['damage_55',['damage',['../classMonster.html#a04a3818d48e570bca2021e4bd698bb53',1,'Monster']]]
+  ['damage_58',['damage',['../classMonster.html#a04a3818d48e570bca2021e4bd698bb53',1,'Monster']]]
 ];

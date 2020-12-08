@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classHero-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Hero Class Reference</div>  </div>
@@ -100,6 +101,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHero.html#a07926dd2bdcc81aaf3a4101c9b559f45">Hero</a> (const std::string &amp;n, const float &amp;h, const float &amp;d, const float &amp;c)</td></tr>
 <tr class="memdesc:a07926dd2bdcc81aaf3a4101c9b559f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor with the right parameters for inicialize a hero. <br /></td></tr>
 <tr class="separator:a07926dd2bdcc81aaf3a4101c9b559f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48eb1df01db74eee1576f2a1cdee3ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHero.html#ac48eb1df01db74eee1576f2a1cdee3ce">attack</a> (<a class="el" href="classMonster.html">Monster</a> &amp;target)</td></tr>
+<tr class="memdesc:ac48eb1df01db74eee1576f2a1cdee3ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">This simulates the attack motion of the <a class="el" href="classHero.html" title="This is a class for the hero unit.">Hero</a>.  <a href="classHero.html#ac48eb1df01db74eee1576f2a1cdee3ce">More...</a><br /></td></tr>
+<tr class="separator:ac48eb1df01db74eee1576f2a1cdee3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b26ace444d1317730bb40ea1ea457ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHero.html#a9b26ace444d1317730bb40ea1ea457ab">fightTilDeath</a> (<a class="el" href="classMonster.html">Monster</a> &amp;target)</td></tr>
 <tr class="memdesc:a9b26ace444d1317730bb40ea1ea457ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The fight between the two unit.  <a href="classHero.html#a9b26ace444d1317730bb40ea1ea457ab">More...</a><br /></td></tr>
 <tr class="separator:a9b26ace444d1317730bb40ea1ea457ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,12 +166,20 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a225f0c60693e4f20e05d95514e67e398 inherit pub_static_methods_classMonster"><td class="mdescLeft">&#160;</td><td class="mdescRight">A parser function for the class.  <a href="classMonster.html#a225f0c60693e4f20e05d95514e67e398">More...</a><br /></td></tr>
 <tr class="separator:a225f0c60693e4f20e05d95514e67e398 inherit pub_static_methods_classMonster"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classMonster"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMonster')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classMonster.html">Monster</a></td></tr>
-<tr class="memitem:a54c169bb167d01fa6ae3df67641a9745 inherit pro_methods_classMonster"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a54c169bb167d01fa6ae3df67641a9745">hpDown</a> (<a class="el" href="classMonster.html">Monster</a> &amp;unit, const float &amp;<a class="el" href="classMonster.html#a04a3818d48e570bca2021e4bd698bb53">damage</a>)</td></tr>
-<tr class="memdesc:a54c169bb167d01fa6ae3df67641a9745 inherit pro_methods_classMonster"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to decrease the health.  <a href="classMonster.html#a54c169bb167d01fa6ae3df67641a9745">More...</a><br /></td></tr>
-<tr class="separator:a54c169bb167d01fa6ae3df67641a9745 inherit pro_methods_classMonster"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9a7a7db8bb95071cb5458520c4aa9a6e"><td class="memItemLeft" align="right" valign="top"><a id="a9a7a7db8bb95071cb5458520c4aa9a6e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHero.html#a9a7a7db8bb95071cb5458520c4aa9a6e">max_health_points</a></td></tr>
+<tr class="memdesc:a9a7a7db8bb95071cb5458520c4aa9a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The max health points of the hero. <br /></td></tr>
+<tr class="separator:a9a7a7db8bb95071cb5458520c4aa9a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522419694ae71f91a499db6b02c05db3"><td class="memItemLeft" align="right" valign="top"><a id="a522419694ae71f91a499db6b02c05db3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHero.html#a522419694ae71f91a499db6b02c05db3">level</a> = 1</td></tr>
+<tr class="memdesc:a522419694ae71f91a499db6b02c05db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The level of the hero. <br /></td></tr>
+<tr class="separator:a522419694ae71f91a499db6b02c05db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e5434e576272c01a55f1538cd1b105"><td class="memItemLeft" align="right" valign="top"><a id="a43e5434e576272c01a55f1538cd1b105"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHero.html#a43e5434e576272c01a55f1538cd1b105">xp</a> = 0</td></tr>
+<tr class="memdesc:a43e5434e576272c01a55f1538cd1b105"><td class="mdescLeft">&#160;</td><td class="mdescRight">The experience points of the hero. <br /></td></tr>
+<tr class="separator:a43e5434e576272c01a55f1538cd1b105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classMonster"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classMonster')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classMonster.html">Monster</a></td></tr>
 <tr class="memitem:a4ce38cc9d6af5a37f54f90d2d7ab8ee0 inherit pro_attribs_classMonster"><td class="memItemLeft" align="right" valign="top"><a id="a4ce38cc9d6af5a37f54f90d2d7ab8ee0"></a>
 const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a4ce38cc9d6af5a37f54f90d2d7ab8ee0">name</a></td></tr>
@@ -189,6 +201,13 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#ae2ddea70cd7da1e03fdbfd855dd59eb4">timer</a></td></tr>
 <tr class="memdesc:ae2ddea70cd7da1e03fdbfd855dd59eb4 inherit pro_attribs_classMonster"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current state of a monster's cooldown. <br /></td></tr>
 <tr class="separator:ae2ddea70cd7da1e03fdbfd855dd59eb4 inherit pro_attribs_classMonster"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classMonster"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMonster')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classMonster.html">Monster</a></td></tr>
+<tr class="memitem:a54c169bb167d01fa6ae3df67641a9745 inherit pro_methods_classMonster"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonster.html#a54c169bb167d01fa6ae3df67641a9745">hpDown</a> (<a class="el" href="classMonster.html">Monster</a> &amp;unit, const float &amp;<a class="el" href="classMonster.html#a04a3818d48e570bca2021e4bd698bb53">damage</a>)</td></tr>
+<tr class="memdesc:a54c169bb167d01fa6ae3df67641a9745 inherit pro_methods_classMonster"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to decrease the health.  <a href="classMonster.html#a54c169bb167d01fa6ae3df67641a9745">More...</a><br /></td></tr>
+<tr class="separator:a54c169bb167d01fa6ae3df67641a9745 inherit pro_methods_classMonster"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a class for the hero unit. </p>
@@ -197,6 +216,37 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <dl class="section version"><dt>Version</dt><dd>2.0</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020/12/06 11:30 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac48eb1df01db74eee1576f2a1cdee3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac48eb1df01db74eee1576f2a1cdee3ce">&#9670;&nbsp;</a></span>attack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hero::attack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMonster.html">Monster</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This simulates the attack motion of the <a class="el" href="classHero.html" title="This is a class for the hero unit.">Hero</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>A monster reference type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>In this function we call again the four functions: <a class="el" href="classMonster.html#a77ad18c44b3fb2df92b30ece4dc7847b" title="Is a unit alive.">isAlive()</a>, <a class="el" href="classMonster.html#af22f7198f2b84e66de63b052f1da33db" title="If a unit can hit.">canHit()</a>, <a class="el" href="classMonster.html#a54c169bb167d01fa6ae3df67641a9745" title="Function to decrease the health.">hpDown()</a> and resetTheCooldown. If the <a class="el" href="classHero.html" title="This is a class for the hero unit.">Hero</a> reaches the right amount of experience points, the hero reaches the next level. Levelling up has some extra for the <a class="el" href="classHero.html" title="This is a class for the hero unit.">Hero</a>, these are:</p><ul>
+<li>The max health points increases by 20.</li>
+<li>The damage increases by 2.</li>
+<li>The current health points resets to the max healt points. </li>
+</ul>
+
+</div>
+</div>
 <a id="a9b26ace444d1317730bb40ea1ea457ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b26ace444d1317730bb40ea1ea457ab">&#9670;&nbsp;</a></span>fightTilDeath()</h2>
 

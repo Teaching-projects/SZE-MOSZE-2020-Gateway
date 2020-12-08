@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t_25',['T',['../classParser.html#a0ab524b130da44411d6ea9b12ac3a5b1',1,'Parser']]],
-  ['timedown_26',['timeDown',['../classMonster.html#a39707c532e9dbedf0624fec2b76be21c',1,'Monster']]],
-  ['timer_27',['timer',['../classMonster.html#ae2ddea70cd7da1e03fdbfd855dd59eb4',1,'Monster']]]
+  ['sze_2dmosze_2d2020_2dgateway_24',['SZE-MOSZE-2020-Gateway',['../md_README.html',1,'']]],
+  ['streamparse_25',['Streamparse',['../classParser.html#a8ce571c034c9342984a962e29e62381a',1,'Parser']]],
+  ['stringparse_26',['Stringparse',['../classParser.html#a4e4bb31917aeab78b6bcd5c9d03de93e',1,'Parser']]]
 ];

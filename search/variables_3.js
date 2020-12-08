@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_57',['name',['../classMonster.html#a4ce38cc9d6af5a37f54f90d2d7ab8ee0',1,'Monster']]]
+  ['level_60',['level',['../classHero.html#a522419694ae71f91a499db6b02c05db3',1,'Hero']]]
 ];

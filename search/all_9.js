@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parser_19',['Parser',['../classParser.html',1,'']]]
+  ['name_20',['name',['../classMonster.html#a4ce38cc9d6af5a37f54f90d2d7ab8ee0',1,'Monster']]]
 ];
