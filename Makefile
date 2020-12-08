@@ -19,11 +19,11 @@ a.out: $(OBJS)
 main.o: main.cpp
 	$(CXX) $(CFLAGS) -c main.cpp
 
-Monster.o: Monster.cpp 
+Monster.o: Monster.cpp
 	$(CXX) $(CFLAGS) -c Monster.cpp
 
 Hero.o: Hero.cpp
-	$(CXX) $(CFLAGS) -c Hero.cpp 
+	$(CXX) $(CFLAGS) -c Hero.cpp
 
 JSON.o: JSON.cpp
 	$(CXX) $(CFLAGS) -c JSON.cpp
@@ -39,7 +39,7 @@ valgrind: $(EXE)
 	valgrind --track-origins=yes --leak-check=full --log-file=$(VAL_OUT) --error-exitcode=1 ./$(EXE) $(UNITS_DIR)/Eivar.json $(UNITS_DIR)/Sigurd.json
 	@echo "Valgrind: DONE"
 
-cppcheck: 
+cppcheck:
 	cppcheck --error-exitcode=1 $(ALL) --enable=warning
 	cppcheck --output-file=$(CPPC_OUT) $(ALL) --enable=style,performance
 	@echo "Cppcheck: DONE"
@@ -53,5 +53,5 @@ unit_test:
 
 diff_test: $(EXE)
 	./$(SCRIPT)
-	diff results.txt expected_output.txt
+	diff results.txt expected.txt
 	@echo "Diff test: DONE"
