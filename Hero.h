@@ -19,11 +19,17 @@
 */
 class Hero : public Monster {
 
-private:
+protected:
 
     float max_health_points; ///< The max health points of the hero.
     float level = 1; ///< The level of the hero.
     float xp = 0; ///< The experience points of the hero.
+
+public:
+
+    /// This is the constructor with the right parameters for inicialize a hero.
+    Hero(const std::string& n, const float& h, const float& d, const float& c)
+        : Monster(n,h,d,c), max_health_points(h) {}
 
     /**
      * \brief This simulates the attack motion of the Hero.
@@ -38,12 +44,6 @@ private:
      * - The current health points resets to the max healt points.
     */
     void attack(Monster& target);
-
-public:
-
-    /// This is the constructor with the right parameters for inicialize a hero.
-    Hero(const std::string& n, const float& h, const float& d, const float& c)
-        : Monster(n,h,d,c), max_health_points(h) {}
 
     /**
      * \brief The fight between the two unit.
