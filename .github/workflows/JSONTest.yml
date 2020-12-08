@@ -1,0 +1,15 @@
+name: JSON Test
+
+on:
+  push
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: JSON_Test
+    container: hmartin28/mosze:latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Unit_test
+        run: make unit_test

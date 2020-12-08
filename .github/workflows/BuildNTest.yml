@@ -1,0 +1,40 @@
+name: Valgrind, cppcheck and diff test
+
+on:
+  push
+
+jobs:
+  Code_test:
+    name: Code_test
+    runs-on: ubuntu-latest
+    container: hmartin28/mosze:latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run_valgrind
+        run: make valgrind
+
+      - name: Uploading_valgrind_results
+        uses: actions/upload-artifact@v2
+        with:
+          name: leaklogfile
+          path: ./leaklogfile.txt
+
+      - name: Run_cppcheck
+        run: make cppcheck
+
+      - name: Uploading_cppcheck_results
+        uses: actions/upload-artifact@v2
+        with:
+          name: cppcheck_results
+          path: ./cppcheckfile.txt
+
+  Diff_test:
+    name: Diff_test
+    runs-on: ubuntu-latest
+    container: hmartin28/mosze:latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Diff_test
+        run: make diff_test

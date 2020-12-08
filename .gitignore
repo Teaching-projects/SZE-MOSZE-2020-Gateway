@@ -85,3 +85,5 @@ results.txt
 /test/Makefile
 /test/runTests
 a.out
+cppcheckfile.txt
+leaklogfile.txt
