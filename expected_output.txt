@@ -176,4 +176,3 @@ Ragnar wins. Remaining HP: 965 | MAXHP: 965, DMG: 95, LVL: 16 |
 ------------------------------------------------------
 
 Ragnar wins. Remaining HP: 965 | MAXHP: 965, DMG: 95, LVL: 16 |
-
