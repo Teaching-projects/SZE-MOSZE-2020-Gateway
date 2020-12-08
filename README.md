@@ -4,6 +4,22 @@ The program simulates a fight between a Hero and a Monster.
   
 There are two classes dedicated to the fighters. Theres a class called **Monster** and a derived class, called **Hero**. The monster class has 5 data tags, these are: *name, healthpoints, damage, cooldown and timer*, the Hero class has additional private data tags. Such as *maxhp, level and xp*.
 
+# Class variables
+
+## Monster class variables
+
+``` name ``` -> The name of the unit.
+``` health_points ``` -> The current health points of the unit.
+``` damage ``` -> The damage value of the unit.
+``` cooldown ``` -> The cooldown of the unit.
+``` timer ``` -> The cooldown timer of the unit.
+
+## Hero class variables
+
+``` maxhp ``` -> The max health points of the hero.
+``` level ``` -> The level of the hero.
+``` xp ``` -> The experience points of the hero.
+
 # Functions
 
 The main functions that the **Monster** class has:
@@ -31,6 +47,10 @@ The functions that the **Hero** class has:
 ``` void fightTilDeath(Monster& target);  ``` -> This simulates the fight between the two unit, until one of them is dead.
 
 ``` static Hero readJson(const std::string& filename);  ``` -> This parses the Hero data from a JSON file.
+
+# Program running
+
+You have to run it ``` ./a.out ``` with the right json files: ``` ./a.out units/Eivar.json units/Sigurd.json ```
 
 # JSON
 
@@ -60,3 +80,4 @@ The test script runs all the possible fights, and in the BuildNTest.yml file the
   
 # Documentation
 [Click here to open the documentation](https://teaching-projects.github.io/SZE-MOSZE-2020-Gateway--Closed/)
+
