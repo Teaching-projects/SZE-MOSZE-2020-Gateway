@@ -19,8 +19,9 @@ void Hero::attack(Monster& target) {
       int mp = floor(xp / 100);
       level += mp;
       xp -= mp * 100;
-      max_health_points += 20;
-      damage += 2;
+      max_health_points += round(pow(1.1,mp));
+      damage += round(pow(1.1,mp));
+      cooldown *= pow(0.9,mp);
       health_points = max_health_points;
     }
   }

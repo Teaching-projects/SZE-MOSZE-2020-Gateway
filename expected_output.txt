@@ -5,7 +5,7 @@
 	Sigurd HP: 1360 DMG: 40 CD: 1.7
 ------------------------------------------------------
 
-Eivar wins. Remaining HP: 900 | MAXHP: 1060, DMG: 46, LVL: 8 |
+Eivar wins. Remaining HP: 923 | MAXHP: 1003, DMG: 43, LVL: 8 |
 
 ------------------------------------------------------
 	Eivar HP: 1000 DMG: 40 CD: 0.8 LVL: 1
@@ -14,7 +14,7 @@ Eivar wins. Remaining HP: 900 | MAXHP: 1060, DMG: 46, LVL: 8 |
 	Ubba HP: 1800 DMG: 10 CD: 1.1
 ------------------------------------------------------
 
-Eivar wins. Remaining HP: 1060 | MAXHP: 1080, DMG: 48, LVL: 16 |
+Eivar wins. Remaining HP: 995 | MAXHP: 1005, DMG: 45, LVL: 16 |
 
 ------------------------------------------------------
 	Sigurd HP: 1360 DMG: 40 CD: 1.7 LVL: 1
@@ -23,7 +23,7 @@ Eivar wins. Remaining HP: 1060 | MAXHP: 1080, DMG: 48, LVL: 16 |
 	Eivar HP: 1000 DMG: 40 CD: 0.8
 ------------------------------------------------------
 
-Sigurd wins. Remaining HP: 1180 | MAXHP: 1420, DMG: 46, LVL: 8 |
+Sigurd wins. Remaining HP: 1203 | MAXHP: 1363, DMG: 43, LVL: 8 |
 
 ------------------------------------------------------
 	Sigurd HP: 1360 DMG: 40 CD: 1.7 LVL: 1
@@ -32,7 +32,7 @@ Sigurd wins. Remaining HP: 1180 | MAXHP: 1420, DMG: 46, LVL: 8 |
 	Ubba HP: 1800 DMG: 10 CD: 1.1
 ------------------------------------------------------
 
-Sigurd wins. Remaining HP: 1380 | MAXHP: 1440, DMG: 48, LVL: 16 |
+Sigurd wins. Remaining HP: 1355 | MAXHP: 1365, DMG: 45, LVL: 16 |
 
 ------------------------------------------------------
 	Ubba HP: 1800 DMG: 10 CD: 1.1 LVL: 1
@@ -41,7 +41,7 @@ Sigurd wins. Remaining HP: 1380 | MAXHP: 1440, DMG: 48, LVL: 16 |
 	Eivar HP: 1000 DMG: 40 CD: 0.8
 ------------------------------------------------------
 
-Ubba wins. Remaining HP: 1260 | MAXHP: 1860, DMG: 16, LVL: 8 |
+Ubba wins. Remaining HP: 1443 | MAXHP: 1803, DMG: 13, LVL: 8 |
 
 ------------------------------------------------------
 	Ubba HP: 1800 DMG: 10 CD: 1.1 LVL: 1
@@ -50,5 +50,5 @@ Ubba wins. Remaining HP: 1260 | MAXHP: 1860, DMG: 16, LVL: 8 |
 	Sigurd HP: 1360 DMG: 40 CD: 1.7
 ------------------------------------------------------
 
-Ubba wins. Remaining HP: 1260 | MAXHP: 1860, DMG: 16, LVL: 8 |
+Ubba wins. Remaining HP: 1443 | MAXHP: 1803, DMG: 13, LVL: 8 |
 
